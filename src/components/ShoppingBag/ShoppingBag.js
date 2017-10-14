@@ -8,7 +8,7 @@ class ShoppingBag extends Component {
     state = {productCount: null};
 
     componentDidMount() {
-        fetch.then((data) => this.setState({productCount: data.count}))
+        // fetch.then((data) => this.setState({productCount: data.count}))
     }
 
     render() {
