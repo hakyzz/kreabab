@@ -1,7 +1,14 @@
+.basket {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
 .shopping-bag {
     height: 60px;
     width: 60px;
     border-radius: 100px;
+    color: var(--primary-color);
     background-color: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.1);
     display: flex;
@@ -9,10 +16,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: all 0.3s ease 0s;
+
+    &:visited {
+        color: var(--primary-color);
+    }
 
     &:hover {
         background-color: #000;
         color: #fff;
+        transform: translate(0, -5px);
     }
 
     &__counter {
@@ -30,8 +43,36 @@
         justify-content: center;
         align-items: center;
     }
+}
 
-    &--blue {
-        background-color: blue;
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+    .basket {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .basket {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+    .shopping-bag {
+        height: 50px;
+        width: 50px;
+        
+        svg {
+            width: 18px;
+        }
+
+        &__counter {
+            right: -2px;
+            top: -2px;
+            height: 18px;
+            width: 18px;
+        }
     }
 }

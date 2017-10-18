@@ -1,5 +1,68 @@
-.App {
-  text-align: center;
-  background-color: #00ff9d; }
-  .App a {
-    color: red; }
+@import url("https://rsms.me/inter/inter-ui.css");
+:root {
+  --base-font: 'Inter UI', sans-serif;
+  --primary-color: #000;
+  --secondary-color: blue;
+  --white: #FFF;
+  --red: #D0021B;
+  --bg-color-light: #F2F2F2;
+  --primary-text-color: black;
+  --secondary-text-color: rgba(0, 0, 0, 0.5);
+  --font-size-xxl: 2.25rem;
+  --font-size-xl: 1.625rem;
+  --font-size-l: 1.125rem;
+  --font-size-m: 1rem;
+  --font-size-s: 0.875rem; }
+
+/* Base Styles -------------------- */
+* {
+  box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  font-family: var(--base-font);
+  font-size: var(--font-size-m);
+  line-height: 1.25;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--primary-text-color); }
+
+h1, h2, h3 {
+  font-family: var(--base-font);
+  font-style: normal;
+  font-weight: 500; }
+
+h1 {
+  font-size: var(--font-size-xxl); }
+
+h2 {
+  font-size: var(--font-size-xl); }
+
+h3 {
+  font-size: var(--font-size-l); }
+
+p {
+  line-height: 1.4; }
+
+/* Pseudo-classes ------------------ */
+a:link {
+  color: var(--secondary-color);
+  text-decoration: none; }
+
+a:visited {
+  color: var(--secondary-color); }
+
+/* Layout-classes ------------------ */
+.wrap {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0px auto; }

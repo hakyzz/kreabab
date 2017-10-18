@@ -1,0 +1,74 @@
+/* Base Styles -------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: var(--base-font);
+    font-size: var(--font-size-m);
+    line-height: 1.25;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--primary-text-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--base-font);
+    font-style: normal;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-l);
+}
+
+p {
+    line-height: 1.4;
+}
+
+
+/* Pseudo-classes ------------------ */
+
+a {
+    &:link {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    &:visited {
+        color: var(--secondary-color);
+    }
+    &:hover {
+        // color: rgba(var(--secondary-color), .5);
+    }
+}
+
+
+/* Layout-classes ------------------ */
+
+.wrap {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0px auto;
+}
+

@@ -1,11 +1,7 @@
-@import 'styles/_colors.scss'; // tests
+// ==========================================================================
+// Global Imports
+// ==========================================================================
 
-.App {
-  text-align: center;
-  background-color: $primary-color;
-  
-  a {
-    color: $secondary-color;
-  }
-  
-}
+@import 'styles/_variables.scss';
+@import 'styles/_mixins.scss';
+@import 'styles/_base.scss';

@@ -1,0 +1,31 @@
+
+// Webfont
+@import url('https://rsms.me/inter/inter-ui.css');
+
+
+
+:root {
+    --base-font : 'Inter UI', sans-serif;
+
+    // General colors
+    --primary-color: #000;
+    --secondary-color: blue;
+    --white: #FFF;
+    --red: #D0021B;
+
+    // Backgrounds
+    --bg-color-light: #F2F2F2;
+
+    // Text Colors
+    --primary-text-color: rgba(0, 0, 0, 1.0);
+    --secondary-text-color: rgba(0, 0, 0, 0.5);
+
+    // Font SIzes
+    --font-size-xxl: 2.25rem; // 36px
+    --font-size-xl: 1.625rem; // 26px
+    --font-size-l: 1.125rem; // 18px
+    --font-size-m: 1rem; // 16px = 1rem (base)
+    --font-size-s: 0.875rem; // 14px
+
+
+}

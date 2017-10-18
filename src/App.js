@@ -13,22 +13,20 @@ import {
 class App extends Component {
   render() {
     return (
-
         <Router>
-            <div className="App">
+            <div>
+                <Route exact path="/" component={HomepageView}/>
+                <Route path="/cart" component={CartView}/>
+                <Route path="/customizer" component={CustomizerView}/>
+                <Route path="/order" component={OrderView}/>
+                
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/cart">Cart</Link></li>
                     <li><Link to="/customizer">Customizer</Link></li>
                     <li><Link to="/order">Order</Link></li>
                 </ul>
-
-                <hr/>
-
-                <Route exact path="/" component={HomepageView}/>
-                <Route path="/cart" component={CartView}/>
-                <Route path="/customizer" component={CustomizerView}/>
-                <Route path="/order" component={OrderView}/>
+            
             </div>
         </Router>
     );

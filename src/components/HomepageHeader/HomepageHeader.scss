@@ -1,0 +1,26 @@
+.intro-header {
+    box-sizing: border-box;
+    background: var(--bg-color-light);
+
+    .intro-header__content {
+        height: 35vh;
+        min-height: 300px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: var(--font-size-l);
+            line-height: 1.75rem;
+            color: var(--secondary-text-color);
+        }
+    
+    }
+
+}
+
