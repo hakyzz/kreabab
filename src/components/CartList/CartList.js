@@ -8,9 +8,14 @@ class CartList extends Component {
     render() {
         return (
             <div className="cart-list">
-                <CartEntry/>
-                <CartEntry/>
-                <CartEntry/>
+                <div className="cart-list__header">
+                    <h1>Warenkorb</h1>
+                </div>
+                <div className="cart-list__list">
+                    <CartEntry/>
+                    <CartEntry/>
+                    <CartEntry/>
+                </div>
             </div>
         );
     }

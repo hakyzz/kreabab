@@ -66,9 +66,76 @@ a {
 
 /* Layout-classes ------------------ */
 
-.wrap {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0px auto;
+.site-content {
+    height: auto;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	min-height: 0;
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+    clear: both;
+    
+    &.detail {
+        padding-top: 10%;
+
+        /* Tablet */
+        @media only screen and (max-width: 1024px) {
+            padding-top: 15%;
+        }
+
+        /* Mobile */
+        @media only screen and (max-width: 768px) {
+            padding-top: 30%;
+        }
+    }
+}
+
+.pane {
+    // border: 1px solid red;
+
+    &.gray {
+        background: var(--bg-color-light);
+    }
+}
+
+.layout-center-xl {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 1125px;
+
+    @media (max-width: 1185px) {
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    @media (max-width: 580px) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.layout-center-l {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 935px;
+
+    @media (max-width: 1185px) {
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    @media (max-width: 580px) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 

@@ -3,7 +3,6 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
 
-
 :root {
     --base-font : 'Inter UI', sans-serif;
 
@@ -15,6 +14,9 @@
 
     // Backgrounds
     --bg-color-light: #F2F2F2;
+
+    // Border
+    --border-light: rgba(0, 0, 0, 0.1);
 
     // Text Colors
     --primary-text-color: rgba(0, 0, 0, 1.0);

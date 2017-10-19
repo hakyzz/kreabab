@@ -7,22 +7,20 @@ class ProductTeaserList extends Component {
 
     render() {
         return (
-            <main className="wrap">
-                <section className="product-teaser-section">
-                    <div className="product-teaser-section__title">
-                        <h2>Hauptgerichte</h2>
-                    </div>
-                    <div className="product-teaser-list">
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                        <ProductTeaser/>
-                    </div>
-                </section>
-            </main>
+            <section className="product-teaser-section">
+                <div className="product-teaser-section__title">
+                    <h2>Hauptgerichte</h2>
+                </div>
+                <div className="product-teaser-list">
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                    <ProductTeaser/>
+                </div>
+            </section>
         );
     }
 }

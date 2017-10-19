@@ -7,13 +7,14 @@ import CartList from '../components/CartList/CartList';
 class CartView extends Component {
     render() {
         return (
-            <div className="checkout-page">
+            <div className="site-content detail">
                 <BackNavigation/>
                 <ShoppingBag/>
-                
-                <h1>Warenkorb</h1>
-                <CartList/>
-
+                <div className="pane">
+                    <div className="layout-center-l">
+                        <CartList/>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -8,11 +8,19 @@ import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList
 class HomepageView extends Component {
     render() {
         return (
-            <div className="page">
+            <div className="site-content">
                 <Logo/>
                 <ShoppingBag/>
-                <HomepageHeader/>
-                <ProductTeaserList/>
+                <div className="pane gray">
+                    <div className="layout-center-xl">
+                        <HomepageHeader/>
+                    </div>
+                </div>
+                <div className="pane">
+                    <div className="layout-center-xl">
+                        <ProductTeaserList/>
+                    </div>
+                </div>
             </div>
         );
     }
