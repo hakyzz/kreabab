@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './ProductTeaser.css';
-import { Link } from 'react-router-dom';
+import { 
+    Link 
+} from 'react-router-dom';
 
 class ProductTeaser extends Component {
 

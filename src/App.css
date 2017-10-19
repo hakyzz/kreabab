@@ -14,6 +14,12 @@
   --font-size-m: 1rem;
   --font-size-s: 0.875rem; }
 
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size-xxl: 1.75rem;
+    --font-size-l: 1rem; } }
+
 /* Base Styles -------------------- */
 * {
   box-sizing: border-box; }
@@ -64,5 +70,5 @@ a:visited {
 /* Layout-classes ------------------ */
 .wrap {
   max-width: 1200px;
-  width: 95%;
+  width: 90%;
   margin: 0px auto; }

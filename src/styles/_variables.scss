@@ -29,3 +29,11 @@
 
 
 }
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    :root {
+        --font-size-xxl: 1.75rem; // 28px
+        --font-size-l: 1rem; // 16px
+    }
+}
