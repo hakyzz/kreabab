@@ -1,3 +1,28 @@
 .cart-list {
-    color: #000;
+    .cart-list__header {
+        margin-bottom: 40px;
+    }
+
+    .cart-list__list {
+        border-top: 1px solid var(--border-light);
+    }
+    
+    .cart-list__summary {
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--font-size-l);
+        padding: 15px 0px;
+        margin-bottom: 15px;
+    }
+    
+    .cart-list__actions {
+        display: flex;
+        justify-content: flex-end;
+
+        .cta-large {
+
+
+        }
+    }
+
 }

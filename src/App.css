@@ -58,6 +58,8 @@ h3 {
   font-size: var(--font-size-l); }
 
 p {
+  font-size: var(--font-size-l);
+  color: var(--secondary-text-color);
   line-height: 1.4; }
 
 /* Pseudo-classes ------------------ */

@@ -8,6 +8,11 @@
     /* Mobile */
     @media only screen and (max-width: 768px) {
         flex-direction: column;
+
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
 }
