@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Dönerteller mit Salat 1",
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "price": "9.90",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl"
+    },
+    {
+        "id": 2,
+        "name": "Dönerteller mit Salat 2",
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "price": "9.90",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl"
+    }
+]

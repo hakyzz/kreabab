@@ -11,26 +11,27 @@ import {
 } from 'react-router-dom';
 
 class App extends Component {
-  render() {
-    return (
-        <Router>
-            <div>
-                <Route exact path="/" component={HomepageView}/>
-                <Route path="/cart" component={CartView}/>
-                <Route path="/customizer" component={CustomizerView}/>
-                <Route path="/order" component={OrderView}/>
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Route exact path="/" component={HomepageView}/>
+                    <Route path="/cart" component={CartView}/>
+                    <Route path="/customizer" component={CustomizerView}/>
+                    <Route path="/order" component={OrderView}/>
+                    
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/cart">Cart</Link></li>
+                        <li><Link to="/customizer">Customizer</Link></li>
+                        <li><Link to="/order">Order</Link></li>
+                    </ul>
                 
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/cart">Cart</Link></li>
-                    <li><Link to="/customizer">Customizer</Link></li>
-                    <li><Link to="/order">Order</Link></li>
-                </ul>
-            
-            </div>
-        </Router>
-    );
-  }
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
