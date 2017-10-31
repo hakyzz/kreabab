@@ -1,7 +1,6 @@
 .basket {
-  position: absolute;
-  top: 30px;
-  right: 6px; }
+  padding-top: 30px;
+  margin-right: 6px; }
 
 .shopping-bag {
   height: 60px;
@@ -40,13 +39,14 @@
 /* Tablet */
 @media only screen and (max-width: 1024px) {
   .basket {
-    top: 20px;
+    padding-top: 20px;
     right: 6px; } }
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
   .basket {
     position: fixed;
+    padding-top: 0;
     top: 15px;
     right: 6px; }
   .shopping-bag {

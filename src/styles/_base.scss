@@ -80,19 +80,19 @@ a {
 	margin-right: auto;
     clear: both;
     
-    &.detail {
-        padding-top: 10%;
-
-        /* Tablet */
-        @media only screen and (max-width: 1024px) {
-            padding-top: 15%;
-        }
-
-        /* Mobile */
-        @media only screen and (max-width: 768px) {
-            padding-top: 30%;
-        }
-    }
+    //&.detail {
+    //    padding-top: 3%;
+    //
+    //    /* Tablet */
+    //    @media only screen and (max-width: 1024px) {
+    //        padding-top: 15%;
+    //    }
+    //
+    //    /* Mobile */
+    //    @media only screen and (max-width: 768px) {
+    //        padding-top: 30%;
+    //    }
+    //}
 }
 
 .pane {
@@ -101,10 +101,16 @@ a {
     &.gray {
         background: var(--bg-color-light);
     }
+
+    &--first {
+        padding-bottom: 5%;
+    }
 }
 
 .layout-center-xl {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;

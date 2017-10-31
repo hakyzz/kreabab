@@ -14,6 +14,8 @@ class HomepageView extends Component {
                     <div className="layout-center-xl">
                         <Logo/>
                         <ShoppingBag/>
+                    </div>
+                    <div className="layout-center-xl">
                         <HomepageHeader/>
                     </div>
                 </div>

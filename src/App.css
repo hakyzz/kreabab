@@ -82,22 +82,17 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
   clear: both; }
-  .site-content.detail {
-    padding-top: 10%;
-    /* Tablet */
-    /* Mobile */ }
-    @media only screen and (max-width: 1024px) {
-      .site-content.detail {
-        padding-top: 15%; } }
-    @media only screen and (max-width: 768px) {
-      .site-content.detail {
-        padding-top: 30%; } }
 
 .pane.gray {
   background: var(--bg-color-light); }
 
+.pane--first {
+  padding-bottom: 5%; }
+
 .layout-center-xl {
-  display: block;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;

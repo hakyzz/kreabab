@@ -8,8 +8,12 @@ class CartView extends Component {
     render() {
         return (
             <div className="site-content detail">
-                <BackNavigation/>
-                <ShoppingBag/>
+                <div className="pane pane--first">
+                    <div className="layout-center-xl">
+                        <BackNavigation/>
+                        <ShoppingBag/>
+                    </div>
+                </div>
                 <div className="pane">
                     <div className="layout-center-l">
                         <CartList/>
