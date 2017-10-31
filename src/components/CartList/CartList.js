@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './CartList.css';
-import { 
-    Link 
-} from 'react-router-dom';
 import CartEntry from '../../components/CartEntry/CartEntry';
+import Button from '../../components/Button/Button';
+import ButtonList from '../../components/ButtonList/ButtonList';
 
 class CartList extends Component {
 
@@ -23,8 +22,10 @@ class CartList extends Component {
                     <div className="">CHF 99.00</div>
                 </div>
                 <div className="cart-list__actions">
-                    <Link to="/" className="btn cta-large secondary">Weiter Shoppen</Link>
-                    <Link to="/" className="btn cta-large primary">Bestellen</Link>
+                    <ButtonList>
+                        <Button linkName="/" className="btn cta-large secondary">Weiter Shoppen</Button>
+                        <Button linkName="/" className="btn cta-large primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
+                    </ButtonList>
                 </div>
             </div>
         );

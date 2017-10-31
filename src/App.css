@@ -64,11 +64,11 @@ p {
 
 /* Pseudo-classes ------------------ */
 a:link {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-decoration: none; }
 
 a:visited {
-  color: var(--secondary-color); }
+  color: var(--primary-color); }
 
 /* Layout-classes ------------------ */
 .site-content {
