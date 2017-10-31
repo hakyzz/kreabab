@@ -1,7 +1,7 @@
 .basket {
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 6px;
 }
 
 .shopping-bag {
@@ -49,7 +49,7 @@
 @media only screen and (max-width: 1024px) {
     .basket {
         top: 20px;
-        right: 20px;
+        right: 6px;
     }
 }
 
@@ -58,7 +58,7 @@
     .basket {
         position: fixed;
         top: 15px;
-        right: 15px;
+        right: 6px;
     }
     .shopping-bag {
         height: 50px;

@@ -10,10 +10,10 @@ class HomepageView extends Component {
     render() {
         return (
             <div className="site-content">
-                <Logo/>
-                <ShoppingBag/>
                 <div className="pane gray">
                     <div className="layout-center-xl">
+                        <Logo/>
+                        <ShoppingBag/>
                         <HomepageHeader/>
                     </div>
                 </div>
