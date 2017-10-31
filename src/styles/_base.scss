@@ -149,3 +149,11 @@ a {
     }
 }
 
+.customizer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+}

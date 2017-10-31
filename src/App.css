@@ -6,6 +6,7 @@
   --white: #FFF;
   --red: #D0021B;
   --bg-color-light: #F2F2F2;
+  --bg-color-grey: #F7F7F7;
   --border-light: rgba(0, 0, 0, 0.1);
   --primary-text-color: black;
   --secondary-text-color: rgba(0, 0, 0, 0.5);
@@ -124,3 +125,11 @@ a:visited {
     .layout-center-l {
       margin-left: 15px;
       margin-right: 15px; } }
+
+.customizer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap; }
