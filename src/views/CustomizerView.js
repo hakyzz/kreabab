@@ -4,10 +4,12 @@ import ProductCustomizer from '../components/ProductCustomizer/ProductCustomizer
 
 class CustomizerView extends Component {
     render() {
+        console.log(this.props.location.pathname);
+
         return (
             <div className="customizer">
                 <ProductOverview />
-                <ProductCustomizer />
+                <ProductCustomizer view={this.props.location.query} />
             </div>
         );
     }

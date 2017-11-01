@@ -8,16 +8,16 @@ class CustomizerNavigation extends Component {
             <div className="customizer-navigation">
                 <ul className="customizer-navigation__list">
                     <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="">Brot</a>
+                        <a className="customizer-navigation__item-link" href="/customizer/:bread">Brot</a>
                     </li>
                     <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="">Zutaten</a>
+                        <a className="customizer-navigation__item-link" href="/customizer/:ingredients">Zutaten</a>
                     </li>
                     <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="">Sauce</a>
+                        <a className="customizer-navigation__item-link" href="/customizer/:sauce">Sauce</a>
                     </li>
                     <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="">Extras</a>
+                        <a className="customizer-navigation__item-link" href="/customizer/:extras">Extras</a>
                     </li>
                 </ul>
             </div>
