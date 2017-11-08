@@ -28,6 +28,7 @@ class IngredientsListEntry extends Component {
                         <span>
                             <span className="ingredients-list-entry__title">{this.props.children}</span>
                             <span className="ingredients-list-entry__text">{this.props.text}</span>
+                            {this.props.price && <span className="ingredients-list-entry__price">{this.props.price}</span>}
                         </span>
                     </label>
                     <input name={this.props.name} id={this.props.title} className="ingredients-list-entry__input" type={listType} />

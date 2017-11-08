@@ -15,7 +15,7 @@ class ProductCustomizer extends Component {
                 <CustomizerNavigation />
                 <IngredientsList type="radioList" title="Brot wählen">
                     <IngredientsListEntry image={ProductImage} name="breadType" title="fladenbrot" text="Lorem Ipsum dolor sit amet">Fladenbrot</IngredientsListEntry>
-                    <IngredientsListEntry image={ProductImage} name="breadType" title="taschenbrot" text="Lorem Ipsum dolor sit amet">Taschenbrot</IngredientsListEntry>
+                    <IngredientsListEntry image={ProductImage} name="breadType" title="taschenbrot" text="Lorem Ipsum dolor sit amet" price="9.90 Fr.-">Taschenbrot</IngredientsListEntry>
                 </IngredientsList>
             </div>
         );
