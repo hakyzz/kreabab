@@ -24,6 +24,10 @@
 
     .cart-entry__image {
         border: 0px solid red;
+
+        img {
+            width: 90px;
+        }
     }
 
     .cart-entry__details {
