@@ -1,22 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Product from '../Product/Product';
+
 import './ProductTeaser.css';
-import Button from '../../components/Button/Button';
 
-class ProductTeaser extends Component {
+const ProductTeaser = ({ product, onAddToCartClicked }) => (
+    <div>
+    <Product
+        name={product.name}
+        image={product.image}
+        description={product.description}
+        price={product.price}
+        inventory={product.inventory} />
+    <button
+        onClick={onAddToCartClicked}
+        disabled={product.inventory > 0 ? '' : 'disabled'}>
+        {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
+    </button>
+    </div>
+)
 
-    render() {
-        return (
-            <div className="product-teaser">
-                <div className="product-teaser__image"><img src="http://via.placeholder.com/220x200" alt=""/></div>
-                <div className="product-teaser__content">
-                    <h3>Dönerteller mit Salat Lorem ipsum dolor sit amet</h3>
-                    <p className="product-teaser__price">ab CHF 9.90</p>
-                    <p className="product-teaser__description">Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl</p>
-                    <Button className="btn" linkName="/customizer">Hinzufügen</Button>
-                </div>
-            </div>        
-        );
-    }
+ProductTeaser.propTypes = {
+    product: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        inventory: PropTypes.number.isRequired
+    }).isRequired,
+    onAddToCartClicked: PropTypes.func.isRequired
 }
 
 export default ProductTeaser;

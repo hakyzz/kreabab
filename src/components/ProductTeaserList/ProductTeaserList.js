@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import './ProductTeaserList.css';
 
-import ProductTeaser from '../../components/ProductTeaser/ProductTeaser';
+const ProductTeaserList = ({ title, children }) => (
+    <section className="product-teaser-section">
+        <div className="product-teaser-section__title">
+            <h2>{title}</h2>
+        </div>
+        <div className="product-teaser-list">
+            {children}
+        </div>
+    </section>
+)
 
-class ProductTeaserList extends Component {
-
-    render() {
-        return (
-            <section className="product-teaser-section">
-                <div className="product-teaser-section__title">
-                    <h2>Hauptgerichte</h2>
-                </div>
-                <div className="product-teaser-list">
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                    <ProductTeaser/>
-                </div>
-            </section>
-        );
-    }
+ProductTeaserList.propTypes = {
+    children: PropTypes.node,
+    title: PropTypes.string.isRequired
 }
 
 export default ProductTeaserList;
