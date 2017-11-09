@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
 import BackNavigation from '../components/BackNavigation/BackNavigation';
 import ShoppingBag from '../components/ShoppingBag/ShoppingBag';
-import CartList from '../components/CartList/CartList';
+
+import CartContainer from '../containers/CartContainer';
 
 class CartView extends Component {
+
     render() {
         return (
             <div className="site-content detail">
@@ -16,7 +17,7 @@ class CartView extends Component {
                 </div>
                 <div className="pane">
                     <div className="layout-center-l">
-                        <CartList/>
+                        <CartContainer/>
                     </div>
                 </div>
             </div>
