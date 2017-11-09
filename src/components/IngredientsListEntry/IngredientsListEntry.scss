@@ -3,6 +3,7 @@
   flex-flow: row nowrap;
   position: relative;
   margin-top: 27px;
+  cursor: pointer;
 
   &__label {
     display: flex;
@@ -24,7 +25,16 @@
     line-height: 30px;
   }
 
+  &__price {
+    display: block;
+    font-weight: 500;
+    font-size: var(--font-size-s);
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+
   &__text {
+    font-size: var(--font-size-s);
     padding-left: 15px;
     display: block;
   }
