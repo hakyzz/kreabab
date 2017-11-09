@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1, 
+        "name": "Dönerteller mit Salat 1",
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        "price": 9.90,
+        "inventory": 10
+    },
+    {
+        "id": 2, 
+        "name": "Dönerteller mit Salat 2", 
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl",
+        "price": 10.99,
+        "inventory": 20
+    },
+    {
+        "id": 3, 
+        "name": "Dönerteller mit Salat 3", 
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "price": 19.99,
+        "inventory": 5
+    },
+    {
+        "id": 4, 
+        "name": "Dönerteller mit Salat 4",
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl",
+        "price": 9.90,
+        "inventory": 10
+    },
+    {
+        "id": 5, 
+        "name": "Dönerteller mit Salat 5", 
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl",
+        "price": 10.99,
+        "inventory": 20
+    },
+    {
+        "id": 6, 
+        "name": "Dönerteller mit Salat 6", 
+        "image": "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        "description": "Zutaten und eine Sauce nach Wahl Lorem ipsum und eine Sauce nach Wahl",
+        "price": 19.99,
+        "inventory": 5
+    }
+]
