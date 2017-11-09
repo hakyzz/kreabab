@@ -37,6 +37,12 @@ const CartList = ({ products, total, onCheckoutClicked }) => {
                     disabled={hasProducts ? '' : 'disabled'}>
                     Checkout
                 </button>
+                {/*
+                <ButtonList>
+                    <Button linkName="/" className="btn cta-large secondary">Weiter Shoppen</Button>
+                    <Button linkName="/" className="btn cta-large primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
+                </ButtonList>
+                */}
             </div>
         </div>
     )
