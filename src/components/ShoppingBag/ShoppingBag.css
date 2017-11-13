@@ -34,7 +34,9 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-size: var(--font-size-s);
+    text-align: center; }
 
 /* Tablet */
 @media only screen and (max-width: 1024px) {

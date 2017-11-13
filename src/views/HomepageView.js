@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Logo from '../components/Logo/Logo';
-import ShoppingBag from '../components/ShoppingBag/ShoppingBag';
 import HomepageHeader from '../components/HomepageHeader/HomepageHeader';
-
+import ShoppingBagContainer from '../containers/ShoppingBagContainer';
 import ProductsContainer from '../containers/ProductsContainer';
+
 
 class HomepageView extends Component {
     
@@ -13,7 +13,7 @@ class HomepageView extends Component {
                 <div className="pane gray">
                     <div className="layout-center-xl">
                         <Logo/>
-                        <ShoppingBag/>
+                        <ShoppingBagContainer/>
                     </div>
                     <div className="layout-center-xl">
                         <HomepageHeader/>

@@ -1,3 +1,10 @@
+import { getProducts } from './productsAction';
+import { addToCart } from './cartActions';
+
+export { getProducts, addToCart }
+
+
+/*
 import shop from '../api/shop'
 import * as types from '../actiontypes/ActionTypes'
 
@@ -38,3 +45,4 @@ const receiveProducts = products => ({
       // dispatch({ type: types.CHECKOUT_FAILURE, cart })
     })
   }
+  */

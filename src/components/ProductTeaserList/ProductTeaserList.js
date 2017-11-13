@@ -1,22 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './ProductTeaserList.css';
 
-const ProductTeaserList = ({ title, children }) => (
+import ProductTeaser from '../ProductTeaser/ProductTeaser';
+
+
+const ProductTeaserList = ({ products, handleAddToCartClick }) => (
     <section className="product-teaser-section">
         <div className="product-teaser-section__title">
-            <h2>{title}</h2>
+            <h2>Hauptgerichte</h2>
         </div>
         <div className="product-teaser-list">
-            {children}
+            {
+                products.map((product, index) => {
+                    return (
+                        <div>
+                        <ProductTeaser
+                        key={index}
+                        id={product.id}
+                        name={product.name}
+                        image={product.image}
+                        description={product.description}
+                        price={product.price}
+                        />
+                        <button onClick={() => {
+                            handleAddToCartClick(product);
+                        }}>Add to Cart</button>
+                        </div>
+                    )
+                })
+            }
         </div>
     </section>
 )
-
-ProductTeaserList.propTypes = {
-    children: PropTypes.node,
-    title: PropTypes.string.isRequired
-}
 
 export default ProductTeaserList;

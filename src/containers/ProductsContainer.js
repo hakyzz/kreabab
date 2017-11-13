@@ -1,42 +1,47 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { addToCart } from '../actions'
-import { getVisibleProducts } from '../reducers/products'
-import ProductTeaser from '../components/ProductTeaser/ProductTeaser'
-import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { getProducts, addToCart } from '../actions';
+
+import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList';
 
 
-const ProductsContainer = ({ products, addToCart }) => (
+class ProductsContainer extends Component {
+    
+    componentDidMount() {
+        this.props.getProducts();
+    }
 
-    <ProductTeaserList title="Hauptgerichte">
-        {products.map(product =>
-        <ProductTeaser
-            key={product.id}
-            product={product}
-            onAddToCartClicked={() => addToCart(product.id)} />
-        )}
-    </ProductTeaserList>
+    handleAddToCartClick = (product) => {
+        this.props.addToCart(product);
+    }
 
-)
-
-ProductsContainer.propTypes = {
-    products: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        inventory: PropTypes.number.isRequired
-    })).isRequired,
-    addToCart: PropTypes.func.isRequired
+    render() {
+        return (
+            <ProductTeaserList
+            products={this.props.products}
+            handleAddToCartClick={this.handleAddToCartClick}
+            />
+        )
+    }
 }
 
-const mapStateToProps = state => ({
-    products: getVisibleProducts(state.products)
-})
+
+function mapStateToProps(state) {
+    return {
+        products: state.productList.products
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        getProducts: getProducts,
+        addToCart: addToCart,
+    }, dispatch)
+}
 
 export default connect(
     mapStateToProps,
-    { addToCart }
-)(ProductsContainer)
+    mapDispatchToProps
+)(ProductsContainer);

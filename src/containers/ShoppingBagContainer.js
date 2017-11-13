@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import CartList from '../components/CartList/CartList'
+import ShoppingBag from '../components/ShoppingBag/ShoppingBag'
 
 
-class CartContainer extends Component {
+class ShoppingBagContainer extends Component {
     render() {
         return (
-            <CartList
+            <ShoppingBag
             cartList={this.props.cart}
             />
         )
@@ -23,4 +23,4 @@ function mapStateToProps(state) {
 export default connect(
     mapStateToProps,
     null
-)(CartContainer);
+)(ShoppingBagContainer);

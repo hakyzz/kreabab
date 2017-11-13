@@ -4,9 +4,11 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
-import reducer from './reducers'
-import { getAllProducts } from './actions'
+
+import reducers from './reducers/index'
+
 import './index.css'
+
 import App from './containers/App'
 import registerServiceWorker from './registerServiceWorker'
 
@@ -17,11 +19,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const store = createStore(
-    reducer,
+    reducers,
     applyMiddleware(...middleware)
 );
-
-store.dispatch(getAllProducts())
 
 ReactDOM.render(
     <Provider store={store}>

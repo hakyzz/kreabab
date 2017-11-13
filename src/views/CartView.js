@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import BackNavigation from '../components/BackNavigation/BackNavigation';
-import ShoppingBag from '../components/ShoppingBag/ShoppingBag';
-
+import ShoppingBagContainer from '../containers/ShoppingBagContainer';
 import CartContainer from '../containers/CartContainer';
 
 class CartView extends Component {
@@ -12,7 +11,7 @@ class CartView extends Component {
                 <div className="pane pane--first">
                     <div className="layout-center-xl">
                         <BackNavigation/>
-                        <ShoppingBag/>
+                        <ShoppingBagContainer/>
                     </div>
                 </div>
                 <div className="pane">

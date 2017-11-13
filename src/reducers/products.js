@@ -1,57 +1,57 @@
-import { combineReducers } from 'redux'
-import { RECEIVE_PRODUCTS, ADD_TO_CART } from '../actiontypes/ActionTypes'
+import { GET_PRODUCTS } from '../actiontypes/ActionTypes';
 
-const products = (state, action) => {
+export function productsReducer(state = {
+    products: [
+      {
+        id: 1, 
+        name: "Dönerteller mit Salat 1",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      },
+      {
+        id: 2, 
+        name: "Dönerteller mit Salat 2",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      },
+      {
+        id: 3, 
+        name: "Dönerteller mit Salat 3",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      },
+      {
+        id: 4, 
+        name: "Dönerteller mit Salat 4",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      },
+      {
+        id: 5, 
+        name: "Dönerteller mit Salat 5",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      },
+      {
+        id: 6, 
+        name: "Dönerteller mit Salat 6",
+        image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
+        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
+        price: 9.90
+      }
+    ]
+  }, action) {
   switch (action.type) {
-    case ADD_TO_CART:
+    case GET_PRODUCTS:
       return {
-        ...state,
-        inventory: state.inventory - 1
+        products: [...state.products]
       }
     default:
       return state
   }
 }
-  
-const byId = (state = {}, action) => {
-  switch (action.type) {
-    case RECEIVE_PRODUCTS:
-      return {
-        ...state,
-        ...action.products.reduce((obj, product) => {
-          obj[product.id] = product
-          return obj
-        }, {})
-      }
-    default:
-      const { productId } = action
-      if (productId) {
-        return {
-          ...state,
-          [productId]: products(state[productId], action)
-        }
-      }
-      return state
-  }
-}
-  
-const visibleIds = (state = [], action) => {
-  switch (action.type) {
-    case RECEIVE_PRODUCTS:
-      return action.products.map(product => product.id)
-    default:
-      return state
-  }
-}
-  
-export default combineReducers({
-  byId,
-  visibleIds
-})
-  
-export const getProduct = (state, id) =>
-  state.byId[id]
-  
-export const getVisibleProducts = state =>
-  state.visibleIds.map(id => getProduct(state, id))
-  

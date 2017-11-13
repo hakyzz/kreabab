@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './CartEntry.css';
-import { 
-    Link 
-} from 'react-router-dom';
 
 
-const CartEntry = ({ name, image, price, inventory }) => (
+const CartEntry = ({ name, image, price }) => (
     <div className="cart-entry">
         <div className="cart-entry__content">
             <div className="cart-entry__image">
@@ -36,12 +33,5 @@ const CartEntry = ({ name, image, price, inventory }) => (
         </div>
     </div>
 )
-
-CartEntry.propTypes = {
-    name: PropTypes.string,
-    image: PropTypes.string,
-    price: PropTypes.number,
-    inventory: PropTypes.number
-}
 
 export default CartEntry;

@@ -1,34 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Product from '../Product/Product';
-
 import './ProductTeaser.css';
 
-const ProductTeaser = ({ product, onAddToCartClicked }) => (
-    <div>
-    <Product
-        name={product.name}
-        image={product.image}
-        description={product.description}
-        price={product.price}
-        inventory={product.inventory} />
-    <button
-        onClick={onAddToCartClicked}
-        disabled={product.inventory > 0 ? '' : 'disabled'}>
-        {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-    </button>
+
+const ProductTeaser = ({ product, name, image, description, price, handleAddToCartClick }) => (
+    <div className="product-teaser">
+        <div className="product-teaser__image">
+            <img src={image} alt=""/>
+        </div>
+        <div className="product-teaser__content">
+            <h3>{name}</h3>
+            <p className="product-teaser__price">ab CHF {price}</p>
+            <p className="product-teaser__description">{description}</p>
+        </div>
     </div>
 )
-
-ProductTeaser.propTypes = {
-    product: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        inventory: PropTypes.number.isRequired
-    }).isRequired,
-    onAddToCartClicked: PropTypes.func.isRequired
-}
 
 export default ProductTeaser;
