@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BackNavigation from '../components/BackNavigation/BackNavigation';
 import ShoppingBagContainer from '../containers/ShoppingBagContainer';
 import CartContainer from '../containers/CartContainer';
+import Footer from '../components/Footer/Footer';
 
 class CartView extends Component {
 
@@ -19,6 +20,7 @@ class CartView extends Component {
                         <CartContainer/>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

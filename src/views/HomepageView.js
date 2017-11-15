@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Logo from '../components/Logo/Logo';
-import HomepageHeader from '../components/HomepageHeader/HomepageHeader';
 import ShoppingBagContainer from '../containers/ShoppingBagContainer';
+import HomepageHeader from '../components/HomepageHeader/HomepageHeader';
 import ProductsContainer from '../containers/ProductsContainer';
+import Footer from '../components/Footer/Footer';
 
 
 class HomepageView extends Component {
@@ -24,6 +25,7 @@ class HomepageView extends Component {
                         <ProductsContainer/>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

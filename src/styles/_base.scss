@@ -79,6 +79,7 @@ a {
 	margin-left: auto;
 	margin-right: auto;
     clear: both;
+    padding-bottom: 3em;
     
     //&.detail {
     //    padding-top: 3%;
@@ -107,7 +108,8 @@ a {
     }
 }
 
-.layout-center-xl {
+.layout-center-xl,
+.site-footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
