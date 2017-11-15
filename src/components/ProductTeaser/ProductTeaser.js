@@ -2,7 +2,7 @@ import React from 'react';
 import './ProductTeaser.css';
 
 
-const ProductTeaser = ({ product, name, image, description, price, handleAddToCartClick }) => (
+const ProductTeaser = ({ children, product, name, image, description, price, handleAddToCartClick }) => (
     <div className="product-teaser">
         <div className="product-teaser__image">
             <img src={image} alt=""/>
@@ -11,6 +11,9 @@ const ProductTeaser = ({ product, name, image, description, price, handleAddToCa
             <h3>{name}</h3>
             <p className="product-teaser__price">ab CHF {price}</p>
             <p className="product-teaser__description">{description}</p>
+        </div>
+        <div className="product-teaser__button">
+            {children}
         </div>
     </div>
 )

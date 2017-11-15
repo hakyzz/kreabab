@@ -8,8 +8,16 @@ import {
 class Button extends Component {
 
     render() {
+        const linkName = this.props.linkName;
         return (
-            <Link to={this.props.linkName} className="btn cta-large secondary">{this.props.children}</Link>
+            <div>
+                {linkName ? (
+                    <Link to={this.props.linkName} className="btn cta-large secondary">{this.props.children}</Link>
+                ) : (
+                    <button onClick={this.props.onClick} className="btn cta-large secondary">{this.props.children}</button>
+                )}
+            </div>
+
         );
     }
 }
