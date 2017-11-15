@@ -3,6 +3,7 @@ import React from 'react';
 import './ProductTeaserList.css';
 
 import ProductTeaser from '../ProductTeaser/ProductTeaser';
+import Button from '../Button/Button';
 
 
 const ProductTeaserList = ({ products, handleAddToCartClick }) => (
@@ -14,7 +15,7 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
             {
                 products.map((product, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                         <ProductTeaser
                         key={index}
                         id={product.id}
@@ -22,10 +23,11 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
                         image={product.image}
                         description={product.description}
                         price={product.price}
-                        />
-                        <button onClick={() => {
-                            handleAddToCartClick(product);
-                        }}>Add to Cart</button>
+                        >
+                            <Button onClick={() => {
+                                handleAddToCartClick(product);
+                            }}>Add to Cart</Button>
+                        </ProductTeaser>
                         </div>
                     )
                 })
