@@ -12,7 +12,7 @@ class CartView extends Component {
                 <div className="pane pane--first">
                     <div className="layout-center-xl">
                         <BackNavigation/>
-                        <ShoppingBagContainer/>
+                        <ShoppingBagContainer modifier="basket--cart-view"/>
                     </div>
                 </div>
                 <div className="pane">

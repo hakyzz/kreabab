@@ -17,7 +17,7 @@ const CartEntry = ({ name, image, price }) => (
         </div>
         <div className="cart-entry__controls">
             <div className="entry-quantity">
-                <label for="entry-quantity">Anzahl:</label>
+                <label htmlFor="entry-quantity">Anzahl:</label>
                 <select name="entry-quantity" className="entry-quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>

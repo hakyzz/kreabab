@@ -22,8 +22,8 @@ const CartList = ({ cartList }) => {
         ))
     ) : (
         <div className="cart-list__empty-state">
-            <img src={EmptyStateImg} className="empty-state-img" alt="Keine Produkte vorhanden"/>
-            <p>Keine Produkte vorhanden</p>
+            <img src={EmptyStateImg} className="cart-list__empty-state-img" alt="Keine Produkte vorhanden"/>
+            <p className="cart-list__empty-state-text">Keine Produkte vorhanden</p>
         </div>
     )
 

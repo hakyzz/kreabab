@@ -30,14 +30,14 @@
         text-align: center;
         padding: 50px;
         border-bottom: 1px solid var(--border-light);
-
-        img {
-            opacity: 1;
-        }
-
-        p {
-            margin-top: 20px;
-        }
     }
 
+    &__empty-state-img {
+        max-width: 100%;
+        opacity: 1;
+    }
+
+    &__empty-state-text {
+        margin-top: 20px;
+    }
 }

@@ -9,6 +9,7 @@ class ShoppingBagContainer extends Component {
         return (
             <ShoppingBag
             cartList={this.props.cart}
+            modifier={this.props.modifier}
             />
         )
     }

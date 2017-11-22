@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import './ShoppingBag.css';
 
 
-const ShoppingBag = ({ cartList }) => {
+const ShoppingBag = ({ cartList, modifier }) => {
     const productCount = cartList.length;
 
     return (
-        <div className="basket">
+        <div className={`basket${modifier ? ' ' + modifier : ''}`}>
             <Link to="/cart" className="shopping-bag">
                 <svg width="22px" height="26px" viewBox="0 0 22 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <g id="Design" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

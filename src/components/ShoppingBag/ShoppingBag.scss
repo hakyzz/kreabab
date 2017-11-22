@@ -1,6 +1,13 @@
 .basket {
-    padding-top: 30px;
-    margin-right: 6px;
+    position: fixed;
+    top: 30px;
+    right: 20%;
+    z-index: 9;
+
+    &--cart-view {
+        position: relative;
+        right: 6px;
+    }
 }
 
 .shopping-bag {
@@ -49,8 +56,6 @@
 /* Tablet */
 @media only screen and (max-width: 1024px) {
     .basket {
-        padding-top: 20px;
-        right: 6px;
     }
 }
 
