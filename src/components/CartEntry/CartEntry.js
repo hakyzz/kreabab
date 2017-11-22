@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import './CartEntry.css';
 
 
-const CartEntry = ({ name, image, price }) => (
-    <div className="cart-entry">
+const CartEntry = ({ id, name, image, price, quantity, totalPrice }) => (
+    <div className="cart-entry" data-id={id}>
         <div className="cart-entry__content">
             <div className="cart-entry__image">
                 <img src={image} alt=""/>
@@ -17,15 +17,13 @@ const CartEntry = ({ name, image, price }) => (
         </div>
         <div className="cart-entry__controls">
             <div className="entry-quantity">
-                <label for="entry-quantity">Anzahl:</label>
+                <label htmlFor="entry-quantity">Anzahl:</label>
                 <select name="entry-quantity" className="entry-quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value={quantity}>{quantity}</option>
                 </select>
             </div>
             <div className="entry-price">
-                <span>CHF {price}</span>
+                <span>CHF {totalPrice}</span>
             </div>
             <div className="entry-remove">
                 <Link to="/" className="remove">Remove</Link>

@@ -7,17 +7,19 @@ import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';
 import ButtonList from '../ButtonList/ButtonList';
 
-
-const CartList = ({ cartList }) => {
-
+const CartList = ({ cartList, cartTotal }) => {
+    
     const hasProducts = cartList.length > 0
     const nodes = hasProducts ? (
         cartList.map((cart, index) => (
             <CartEntry
             key={index}
+            id={cart.id}
             name={cart.name}
             image={cart.image}
             price={cart.price}
+            quantity={cart.quantity}
+            totalPrice={cart.totalPrice}
             />
         ))
     ) : (
@@ -37,7 +39,7 @@ const CartList = ({ cartList }) => {
             </div>
             <div className="cart-list__summary">
                 <div className="">Total</div>
-                <div className="">CHF ### Total ###</div>
+                <div className="">CHF {cartTotal}</div>
             </div>
             <div className="cart-list__actions">
                 <ButtonList>
