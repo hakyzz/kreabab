@@ -9,6 +9,7 @@ class CartContainer extends Component {
         return (
             <CartList
             cartList={this.props.cart}
+            cartTotal={this.props.cartTotal}
             />
         )
     }
@@ -17,6 +18,7 @@ class CartContainer extends Component {
 function mapStateToProps(state) {
     return {
         cart: state.cartList.cart,
+        cartTotal: state.cartList.cartTotal
     }
 }
   
