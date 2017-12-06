@@ -9,6 +9,7 @@ class ShoppingBagContainer extends Component {
         return (
             <ShoppingBag
             cartList={this.props.cart}
+            cartTotalNoOfItems = {this.props.cartTotalNoOfItems}
             modifier={this.props.modifier}
             />
         )
@@ -18,6 +19,7 @@ class ShoppingBagContainer extends Component {
 function mapStateToProps(state) {
     return {
         cart: state.cartList.cart,
+        cartTotalNoOfItems: state.cartList.cartTotalNoOfItems
     }
 }
   

@@ -7,7 +7,7 @@ import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';
 import ButtonList from '../ButtonList/ButtonList';
 
-const CartList = ({ cartList, cartTotal }) => {
+const CartList = ({ cartList, cartTotal, deleteFromCart, changeQuantityCart }) => {
     
     const hasProducts = cartList.length > 0
     const nodes = hasProducts ? (
@@ -20,6 +20,8 @@ const CartList = ({ cartList, cartTotal }) => {
             price={cart.price}
             quantity={cart.quantity}
             totalPrice={cart.totalPrice}
+            deleteFromCart={deleteFromCart}
+            changeQuantityCart={changeQuantityCart}
             />
         ))
     ) : (

@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import './ShoppingBag.css';
 
 
-const ShoppingBag = ({ cartList, modifier }) => {
-    const productCount = cartList.length;
+const ShoppingBag = ({ cartList, cartTotalNoOfItems, modifier }) => {
 
     return (
         <div className={`basket${modifier ? ' ' + modifier : ''}`}>
@@ -18,7 +17,7 @@ const ShoppingBag = ({ cartList, modifier }) => {
                     </g>
                 </svg>
                 <div className="shopping-bag__counter">
-                    <span>{productCount}</span>
+                    <span>{cartTotalNoOfItems}</span>
                 </div>
             </Link>
         </div>

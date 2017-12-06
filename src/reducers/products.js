@@ -3,42 +3,42 @@ import { GET_PRODUCTS } from '../actiontypes/ActionTypes';
 export function productsReducer(state = {
     products: [
       {
-        id: 1, 
+        id: 100, 
         name: "Dönerteller mit Salat 1",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 9.90
+        price: 12.90
       },
       {
-        id: 2, 
+        id: 200, 
         name: "Dönerteller mit Salat 2",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90
       },
       {
-        id: 3, 
+        id: 300, 
         name: "Dönerteller mit Salat 3",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 9.90
+        price: 15.90
       },
       {
-        id: 4, 
+        id: 400, 
         name: "Dönerteller mit Salat 4",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 9.90
+        price: 20.45
       },
       {
-        id: 5, 
+        id: 500, 
         name: "Dönerteller mit Salat 5",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90
       },
       {
-        id: 6, 
+        id: 600, 
         name: "Dönerteller mit Salat 6",
         image: "http://rostock.studentsstudents.de/wp-content/uploads/2016/08/D%C3%B6ner.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
