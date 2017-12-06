@@ -1,0 +1,9 @@
+.ingredients-list {
+  padding: 20px;
+
+  &__symbols {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 27px 0;
+  }
+}

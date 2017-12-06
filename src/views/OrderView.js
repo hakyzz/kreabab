@@ -7,7 +7,11 @@ class OrderView extends Component {
     render() {
         return (
             <div className="site-content detail">
-                <BackNavigation/>
+                <div className="pane pane--first">
+                    <div className="layout-center-xl">
+                        <BackNavigation/>
+                    </div>
+                </div>
                 <div className="pane">
                     <div className="layout-center-l">
                         <OrderViewSummery/>
