@@ -39,7 +39,6 @@ export default class CartEntry extends Component {
         function onDeleteHandler(event) {
             const itemId = event.target.getAttribute("id");
             this.props.deleteFromCart(itemId);
-            // console.log(itemId);
         }
 
         return (
