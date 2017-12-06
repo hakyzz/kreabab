@@ -19,7 +19,7 @@ class ShoppingBagContainer extends Component {
 function mapStateToProps(state) {
     return {
         cart: state.cartList.cart,
-        cartTotalNoOfItems: state.cartList.cartTotalNoOfItems
+        cartTotalNoOfItems: state.cartList.cartTotalNumberOfProducts
     }
 }
   

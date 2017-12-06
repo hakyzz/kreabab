@@ -19,8 +19,7 @@ export function cartReducer(state = {
                     return element;
                 });
                 let newState1 = updateTotal(newState);
-                let newState2 = updateTotalNumberOfProducts(newState1);
-                return newState2;
+                return updateTotalNumberOfProducts(newState1);
 
             } else {
                 let newState = {...state};
@@ -34,30 +33,30 @@ export function cartReducer(state = {
                 };
                 newState.cart.push(newItem);
                 let newState1 = updateTotal(newState);
-                let newState2 = updateTotalNumberOfProducts(newState1);
-                return newState2;
+                return updateTotalNumberOfProducts(newState1);
             }
 
         case CHANGE_QUANTITY_CART:
             let newState3 = {...state};
             newState3.cart = state.cart.map( element => {
-                if (element.id === action.id) {
+                // eslint-disable-next-line
+                if (element.id === parseInt(action.id)) {
                     element.quantity = action.quantity;
-                    element.totalPrice = Number(element.price) * element.quantity;
+                    element.totalPrice = Math.round((Number(element.price) * element.quantity) * 100) / 100;
                 }
                 return element;
-            })
+            });
             newState3 = updateTotal(newState3);
-            return newState3; // TODO: Funktioniert ebenfalls noch nicht
+            return newState3;
 
             
         case DELETE_FROM_CART:
             let newState4 = {...state};
-            newState4.cart = state.cart.filter( element => element.id !== action.id ) // TODO: Zu löschendes Element scheint nicht gefiltert zu werden.
-            
-            console.log(newState4.cart); // TODO: Neuer State beinhaltet immer noch alle Elemente.
+            // eslint-disable-next-line
+            newState4.cart = state.cart.filter( element => element.id !== parseInt(action.id));
             
             newState4 = updateTotal(newState4);
+            newState4 = updateTotalNumberOfProducts(newState4);
             return newState4;
 
         default:

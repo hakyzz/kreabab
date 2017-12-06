@@ -14,7 +14,7 @@ class HomepageView extends Component {
                 <div className="pane gray">
                     <div className="layout-center-xl">
                         <Logo/>
-                        <ShoppingBagContainer/>
+                        <ShoppingBagContainer />
                     </div>
                     <div className="layout-center-xl">
                         <HomepageHeader/>
