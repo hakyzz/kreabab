@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './CartList.css';
-import EmptyStateImg from './empty-basket.svg';
+import EmptyStateImg from './empty.svg';
 
 import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';

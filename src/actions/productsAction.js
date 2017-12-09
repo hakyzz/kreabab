@@ -1,4 +1,6 @@
-import { GET_PRODUCTS } from '../actiontypes/ActionTypes';
+import { 
+  GET_PRODUCTS 
+} from '../actiontypes/ActionTypes';
 
 export function getProducts() {
   return {
