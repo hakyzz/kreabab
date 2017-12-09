@@ -47,6 +47,7 @@ export function cartReducer(state = {
                 return element;
             });
             newState3 = updateTotal(newState3);
+            newState3 = updateTotalNumberOfProducts(newState3);
             return newState3;
 
             
