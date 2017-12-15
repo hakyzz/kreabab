@@ -26,5 +26,6 @@
 /* Mobile */
 @media only screen and (max-width: 768px) {
     .product-teaser-list {
+        grid-template-columns:100%;
     }
 }
