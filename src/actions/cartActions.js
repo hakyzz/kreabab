@@ -1,4 +1,9 @@
-import { ADD_TO_CART, CHANGE_QUANTITY_CART, DELETE_FROM_CART } from '../actiontypes/ActionTypes';
+import { 
+  ADD_TO_CART, 
+  CHANGE_QUANTITY_CART, 
+  DELETE_FROM_CART 
+} from '../actiontypes/ActionTypes';
+
 
 export function addToCart(product) {
   return {
