@@ -24,16 +24,13 @@ export default class CartEntry extends Component {
         const quantity = target.value;
         const itemId = target.getAttribute("id");
         const name = target.name; //quantity
-        // console.log(event);
         
         this.setState({
             [name]: quantity
         });
     
         this.props.changeQuantityCart(itemId, quantity)
-        // console.log(itemId, quantity);
     }
-
 
     render() {
         function onDeleteHandler(event) {
