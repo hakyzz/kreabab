@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ShoppingBag.css';
 
 
-const ShoppingBag = ({ cartList, cartTotalNoOfItems, modifier }) => {
+const ShoppingBag = ({ cartTotalNoOfItems, modifier }) => {
 
     return (
         <div className={`basket${modifier ? ' ' + modifier : ''}`}>

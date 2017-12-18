@@ -7,19 +7,18 @@ import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';
 import ButtonList from '../ButtonList/ButtonList';
 
-const CartList = ({ cartList, cartTotal, deleteFromCart, changeQuantityCart }) => {
-    
-    const hasProducts = cartList.length > 0
+const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
+    const hasProducts = cart.length > 0
     const nodes = hasProducts ? (
-        cartList.map((cart, index) => (
+        cart.map((cartItem, index) => (
             <CartEntry
             key={index}
-            id={cart.id}
-            name={cart.name}
-            image={cart.image}
-            price={cart.price}
-            quantity={cart.quantity}
-            totalPrice={cart.totalPrice}
+            id={cartItem.id}
+            name={cartItem.name}
+            image={cartItem.image}
+            price={cartItem.price}
+            quantity={cartItem.quantity}
+            totalPrice={cartItem.totalPrice}
             deleteFromCart={deleteFromCart}
             changeQuantityCart={changeQuantityCart}
             />
@@ -46,7 +45,7 @@ const CartList = ({ cartList, cartTotal, deleteFromCart, changeQuantityCart }) =
             <div className="cart-list__actions">
                 <ButtonList>
                     <Button linkName="/" className="btn cta-large secondary">Weiter Shoppen</Button>
-                    <Button linkName="/" className="btn cta-large primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
+                    <Button linkName="/order" className="btn cta-large primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
                 </ButtonList>
             </div>
         </div>

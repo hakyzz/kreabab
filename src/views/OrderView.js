@@ -4,6 +4,11 @@ import BackNavigation from '../components/BackNavigation/BackNavigation';
 import OrderViewSummery from '../components/OrderViewSummery/OrderViewSummery';
 
 class OrderView extends Component {
+
+    componentDidMount = () => {
+        this.props.completeOrder();
+    };
+
     render() {
         return (
             <div className="site-content detail">

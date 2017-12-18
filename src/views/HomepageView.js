@@ -7,7 +7,6 @@ import Footer from '../components/Footer/Footer';
 
 
 class HomepageView extends Component {
-    
     render() {
         return (
             <div className="site-content">

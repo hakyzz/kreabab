@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { getProducts, addToCart } from '../actions';
+import { getProducts, addToCart } from '../actionCreators';
 
 import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList';
 

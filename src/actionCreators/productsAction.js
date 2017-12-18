@@ -1,6 +1,6 @@
 import { 
   GET_PRODUCTS 
-} from '../actiontypes/ActionTypes';
+} from '../constants/ActionTypes';
 
 export function getProducts() {
   return {

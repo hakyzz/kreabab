@@ -2,7 +2,8 @@ import { getProducts } from './productsAction';
 import { 
     addToCart,
     changeQuantityCart,
-    deleteFromCart
+    deleteFromCart,
+    completeOrder
 } from './cartActions';
 
 
@@ -10,5 +11,6 @@ export {
     getProducts, 
     addToCart, 
     changeQuantityCart,
-    deleteFromCart 
+    deleteFromCart,
+    completeOrder
 }

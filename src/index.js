@@ -1,42 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import { createLogger } from 'redux-logger'
-import thunk from 'redux-thunk'
-import { loadState, saveState  } from './localStorage'
 
-import reducers from './reducers/index'
+import { Provider } from 'react-redux'
 
 import './index.css'
 
-import App from './containers/App'
+import App from './containers/AppContainer'
 import registerServiceWorker from './registerServiceWorker'
 
-
-const middleware = [ thunk ];
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
-
-const persistedState = loadState();
-
-const store = createStore(
-    reducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(...middleware)
-);
-
-store.dispatch(() => {
-    
-});
-
-store.subscribe(() => {
-    saveState(store.getState());
-});
+import storeInstance from './helper/storeInstance'
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={storeInstance}>
         <App />
     </Provider>,
     document.getElementById('root')

@@ -4,7 +4,7 @@ import './App.css';
 import HomepageView from '../views/HomepageView';
 import CartView from '../views/CartView';
 import CustomizerView from '../views/CustomizerView';
-import OrderView from '../views/OrderView';
+import OrderViewContainer from './OrderViewContainer';
 
 import {
     BrowserRouter as Router,
@@ -21,7 +21,7 @@ class App extends Component {
                     <Route exact path="/" component={HomepageView}/>
                     <Route path="/cart" component={CartView}/>
                     <Route path="/customizer" component={CustomizerView}/>
-                    <Route path="/order" component={OrderView}/>
+                    <Route path="/order" component={OrderViewContainer}/>
                     
                     {/*<ul>*/}
                         {/*<li><Link to="/">Home</Link></li>*/}

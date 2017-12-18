@@ -1,4 +1,4 @@
-import { GET_PRODUCTS } from '../actiontypes/ActionTypes';
+import { GET_PRODUCTS } from '../constants/ActionTypes';
 
 export function productsReducer(state = {
     products: [
@@ -50,7 +50,7 @@ export function productsReducer(state = {
     case GET_PRODUCTS:
       return {
         products: [...state.products]
-      }
+      };
     default:
       return state
   }

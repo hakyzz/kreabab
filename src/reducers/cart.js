@@ -1,16 +1,27 @@
-import {ADD_TO_CART, CHANGE_QUANTITY_CART, DELETE_FROM_CART} from '../actiontypes/ActionTypes'
+import {ADD_TO_CART, CHANGE_QUANTITY_CART, DELETE_FROM_CART, COMPLETE_ORDER} from '../constants/ActionTypes'
+import { getCartItems } from "../helper/localStorage";
 
-export function cartReducer(state = {
-    cartTotal: '',
-    cartTotalNumberOfProducts: 0,
-    cart: []
-}, action) {
+const initialEmptyState = [];
+
+// Check local storage for initial state
+function getInitialState() {
+    const cardStateFromLocalStorage = getCartItems();
+    if(cardStateFromLocalStorage) {
+        return cardStateFromLocalStorage
+    }
+    return initialEmptyState
+}
+
+export function cartReducer(state = getInitialState(), action) {
     switch (action.type) {
+        case COMPLETE_ORDER:
+            return initialEmptyState;
+
         case ADD_TO_CART:
-            const elem = state.cart.find(element => element.id === action.payload.id);
+            const elem = state.find(element => element.id === action.payload.id);
             if (elem) {
-                let newState = {...state};
-                newState.cart = state.cart.map(element => {
+                let newState = [...state];
+                newState = state.map(element => {
                     if (element.id === action.payload.id) {
                         element.quantity++;
                         element.totalPrice = Number(element.price) * element.quantity;
@@ -22,7 +33,7 @@ export function cartReducer(state = {
                 return updateTotalNumberOfProducts(newState1);
 
             } else {
-                let newState = {...state};
+                let newState = [...state];
                 const newItem = {
                     id: action.payload.id,
                     name: action.payload.name,
@@ -31,14 +42,14 @@ export function cartReducer(state = {
                     totalPrice: action.payload.price,
                     quantity: 1
                 };
-                newState.cart.push(newItem);
+                newState.push(newItem);
                 let newState1 = updateTotal(newState);
                 return updateTotalNumberOfProducts(newState1);
             }
 
         case CHANGE_QUANTITY_CART:
-            let newState3 = {...state};
-            newState3.cart = state.cart.map( element => {
+            let newState3 = [...state];
+            newState3 = state.map( element => {
                 // eslint-disable-next-line
                 if (element.id === parseInt(action.id)) {
                     element.quantity = action.quantity;
@@ -50,12 +61,12 @@ export function cartReducer(state = {
             newState3 = updateTotalNumberOfProducts(newState3);
             return newState3;
 
-            
+
         case DELETE_FROM_CART:
-            let newState4 = {...state};
+            let newState4 = [...state];
             // eslint-disable-next-line
-            newState4.cart = state.cart.filter( element => element.id !== parseInt(action.id));
-            
+            newState4 = state.filter( element => element.id !== parseInt(action.id));
+
             newState4 = updateTotal(newState4);
             newState4 = updateTotalNumberOfProducts(newState4);
             return newState4;
@@ -65,22 +76,19 @@ export function cartReducer(state = {
     }
 }
 
-
 function updateTotalNumberOfProducts(newState) {
   let quantity = 0;
-  newState.cart.map(elem => {
+  newState.map(elem => {
     return quantity = Number(quantity) + elem.quantity
   });
-  newState.cartTotalNumberOfProducts = quantity;
   return newState;
 }
 
-
 function updateTotal(newState) {
   let total = 0;
-  newState.cart.map(elem => {
+  newState.map(elem => {
       return total = Number(total) + elem.quantity * elem.price
   });
-  newState.cartTotal = Math.round(total * 100) / 100;
+  // newState.cartTotal = Math.round(total * 100) / 100;
   return newState;
 }

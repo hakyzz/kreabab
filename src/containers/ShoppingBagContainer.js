@@ -1,30 +1,14 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { getCartState } from '../localStorage'
-
 import ShoppingBag from '../components/ShoppingBag/ShoppingBag'
+import { getCartTotalNoOfItems } from '../selectors/cart'
 
-
-class ShoppingBagContainer extends Component {
-    render() {
-        return (
-            <ShoppingBag
-            cartList={this.props.cart}
-            cartTotalNoOfItems = {this.props.cartTotalNoOfItems}
-            modifier={this.props.modifier}
-            />
-        )
-    }
-}
-
-function mapStateToProps() {
+function mapStateToProps(state) {
     return {
-        cart: getCartState().cart,
-        cartTotalNoOfItems: getCartState().cartTotalNumberOfProducts
+        cartTotalNoOfItems: getCartTotalNoOfItems(state)
     }
 }
   
 export default connect(
     mapStateToProps,
     null
-)(ShoppingBagContainer);
+)(ShoppingBag);
