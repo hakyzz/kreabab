@@ -1,6 +1,6 @@
 export const getCartTotalNoOfItems = (state) => {
     return state.cartList.reduce((acc, cartItem) => {
-        return acc + cartItem.quantity
+        return parseInt(acc, 10) + parseInt(cartItem.quantity, 10);
     }, 0)
 };
 
@@ -10,6 +10,6 @@ export const getCart = (state) => {
 
 export const getCartTotal = (state) => {
     return state.cartList.reduce((acc, cartItem) => {
-        return acc + cartItem.quantity * cartItem.price
+        return parseInt(acc, 10) + parseInt(cartItem.quantity, 10) * cartItem.price
     }, 0)
 };

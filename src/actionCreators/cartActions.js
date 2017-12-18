@@ -4,49 +4,32 @@ import {
     DELETE_FROM_CART,
     COMPLETE_ORDER
 } from '../constants/ActionTypes';
-import { saveCartItems } from "../helper/localStorage";
-
-function persistCartState(state) {
-    saveCartItems(state.cartList)
-}
 
 export function addToCart(product) {
-    return (dispatch, getState) => {
-        dispatch({
-            type: ADD_TO_CART,
-            payload: product
-        });
-        persistCartState(getState());
+    return {
+        type: ADD_TO_CART,
+        payload: product
     }
 }
 
-export const changeQuantityCart = (id, quantity) => {
-    return (dispatch, getState) => {
-        dispatch({
-            type: CHANGE_QUANTITY_CART,
-            id,
-            quantity
-        });
-        persistCartState(getState());
+export function changeQuantityCart(id, quantity) {
+    return {
+        type: CHANGE_QUANTITY_CART,
+        id,
+        quantity
     }
 };
 
-export const deleteFromCart = (id) => {
-    return (dispatch, getState) => {
-        dispatch({
-            type: DELETE_FROM_CART,
-            id
-        });
-        persistCartState(getState());
+export function deleteFromCart(id) {
+    return {
+        type: DELETE_FROM_CART,
+        id
     }
 };
 
-export const completeOrder = () => {
-    return (dispatch, getState) => {
-        dispatch({
-            type: COMPLETE_ORDER
-        });
-        persistCartState(getState());
+export function completeOrder() {
+    return {
+        type: COMPLETE_ORDER
     }
 };
 

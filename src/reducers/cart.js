@@ -89,6 +89,6 @@ function updateTotal(newState) {
   newState.map(elem => {
       return total = Number(total) + elem.quantity * elem.price
   });
-  // newState.cartTotal = Math.round(total * 100) / 100;
+  newState.cartTotal = Math.round(total * 100) / 100;
   return newState;
 }
