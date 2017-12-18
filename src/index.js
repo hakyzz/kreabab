@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
+import { loadState, saveState  } from './localStorage'
 
 import reducers from './reducers/index'
 
@@ -18,11 +19,21 @@ if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
 }
 
+const persistedState = loadState();
+
 const store = createStore(
     reducers,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(...middleware)
 );
+
+store.dispatch(() => {
+    
+});
+
+store.subscribe(() => {
+    saveState(store.getState());
+});
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
+import { getCartState } from '../localStorage'
 
 import { deleteFromCart, changeQuantityCart } from '../actions';
 
@@ -20,10 +21,10 @@ class CartContainer extends Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
     return {
-        cart: state.cartList.cart,
-        cartTotal: state.cartList.cartTotal
+        cart: getCartState().cart,
+        cartTotal: getCartState().cartTotal
     }
 }
 

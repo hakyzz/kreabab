@@ -52,12 +52,12 @@ export default class CartEntry extends Component {
                 <div className="cart-entry__controls">
                     <div className="entry-quantity">
                         <label htmlFor="entry-quantity">Anzahl:</label>
-                        <input 
+                        <input
                             type="number"
                             className="entry-quantity"
                             id={this.props.id}
                             min="1"
-                            name="entry-quantity" 
+                            name="entry-quantity"
                             value={this.state.quantity}
                             onChange={this.handleInputChange}
                             />

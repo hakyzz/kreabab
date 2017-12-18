@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { getCartState } from '../localStorage'
 
 import ShoppingBag from '../components/ShoppingBag/ShoppingBag'
 
@@ -16,10 +17,10 @@ class ShoppingBagContainer extends Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
     return {
-        cart: state.cartList.cart,
-        cartTotalNoOfItems: state.cartList.cartTotalNumberOfProducts
+        cart: getCartState().cart,
+        cartTotalNoOfItems: getCartState().cartTotalNumberOfProducts
     }
 }
   

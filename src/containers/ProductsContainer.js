@@ -15,7 +15,7 @@ class ProductsContainer extends Component {
 
     handleAddToCartClick = (product) => {
         this.props.addToCart(product);
-    }
+    };
 
     render() {
         return (

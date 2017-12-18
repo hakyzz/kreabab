@@ -71,7 +71,6 @@ function updateTotalNumberOfProducts(newState) {
   newState.cart.map(elem => {
     return quantity = Number(quantity) + elem.quantity
   });
-  // console.log(quantity);
   newState.cartTotalNumberOfProducts = quantity;
   return newState;
 }
