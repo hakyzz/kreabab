@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 
 import './CartEntry.css';
+import FormatPrice from '../FormatPrice/FormatPrice';
 
 
 export default class CartEntry extends Component {
@@ -63,7 +64,7 @@ export default class CartEntry extends Component {
                             />
                     </div>
                     <div className="entry-price">
-                        <span>CHF {this.props.totalPrice}</span>
+                        <span><FormatPrice price={this.props.totalPrice}/></span>
                     </div>
                     <div className="entry-remove">
                         <button 

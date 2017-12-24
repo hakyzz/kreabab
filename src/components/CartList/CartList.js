@@ -6,9 +6,10 @@ import EmptyStateImg from './empty.svg';
 import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';
 import ButtonList from '../ButtonList/ButtonList';
+import FormatPrice from '../FormatPrice/FormatPrice';
 
 const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
-    const hasProducts = cart.length > 0
+    const hasProducts = cart.length > 0;
     const nodes = hasProducts ? (
         cart.map((cartItem, index) => (
             <CartEntry
@@ -40,7 +41,7 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
             </div>
             <div className="cart-list__summary">
                 <div className="">Total</div>
-                <div className="">CHF {cartTotal}</div>
+                <div className=""><FormatPrice price={cartTotal}/></div>
             </div>
             <div className="cart-list__actions">
                 <ButtonList>
