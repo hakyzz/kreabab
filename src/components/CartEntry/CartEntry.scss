@@ -62,9 +62,12 @@
 
     .entry-quantity {
         align-self: center;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
         // background-image: url(dropdown-arrow.svg);
         
-        input {
+        .Select-control {
             margin-left: 10px;
             width: 65px;
             padding: 5px 10px 5px 15px;
@@ -82,6 +85,12 @@
             &:hover {
                 border: 1px solid var(--border-light);
             }
+        }
+
+        .Select-value {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
         }
 
     }
