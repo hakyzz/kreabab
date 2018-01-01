@@ -1,11 +1,18 @@
+// Demo REST API via https://www.mocky.io/
+// http://www.mocky.io/v2/5a4a8aeb310000a909cd9af6
+
 import * as R from 'ramda'
+import request from 'superagent'
 
 import products from './mockProducts'
 
 export const fetchProducts = async () => {
-  return new Promise(resolve => {
-    resolve(products)
-  })
+  const {body} = await request.get('http://www.mocky.io/v2/5a4a8aeb310000a909cd9af6')
+  return body.products
+  // return new Promise(resolve => {
+  //   resolve(products)
+  // })
+  
 }
 /* 
 Check Error handling
