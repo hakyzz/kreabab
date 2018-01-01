@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 
-import { getProducts, addToCart } from '../actionCreators';
+import { fetchProducts, addToCart } from '../actionCreators';
 
+import { getProducts } from '../selectors/product'
 import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList';
 
 
 class ProductsContainer extends Component {
     
     componentDidMount() {
-        this.props.getProducts();
+        // this.props.getProducts();
+        this.props.fetchProducts();
     }
 
     handleAddToCartClick = (product) => {
@@ -28,17 +30,15 @@ class ProductsContainer extends Component {
 }
 
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
     return {
-        products: state.productList.products
+        products: getProducts(state)
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({
-        getProducts: getProducts,
-        addToCart: addToCart,
-    }, dispatch)
+const mapDispatchToProps = {
+    fetchProducts,
+    addToCart
 }
 
 export default connect(
