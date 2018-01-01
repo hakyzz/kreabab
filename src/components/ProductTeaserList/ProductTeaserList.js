@@ -1,6 +1,7 @@
 import React from 'react';
-
 import './ProductTeaserList.css';
+
+import { Link } from 'react-router-dom'
 
 import ProductTeaser from '../ProductTeaser/ProductTeaser';
 import Button from '../Button/Button';
@@ -15,7 +16,6 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
             {
                 products.map((product, index) => {
                     return (
-                        <div key={index}>
                         <ProductTeaser
                         key={index}
                         id={product.id}
@@ -27,8 +27,12 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
                             <Button onClick={() => {
                                 handleAddToCartClick(product);
                             }}>Add to Cart</Button>
+                            <div>
+                                <Link to={`/products/${product.id}`} className="cta-details">
+                                    Details
+                                </Link>
+                            </div>
                         </ProductTeaser>
-                        </div>
                     )
                 })
             }

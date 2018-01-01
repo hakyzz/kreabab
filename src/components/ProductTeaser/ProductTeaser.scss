@@ -1,9 +1,22 @@
 .product-teaser {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 
     .product-teaser__image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+
         img {
-            width: 100%
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            border-radius: 5px;
         }
     }
 
@@ -30,6 +43,27 @@
         margin-bottom: 20px;
         font-size: var(--font-size-m);
     }
+    .product-teaser__button {
+        display: flex;
+        align-items: center;
+
+        .cta-details {
+            font-size: var(--font-size-s);
+            color: var(--secondary-text-color);
+            padding: 10px 0px 0px 0px;
+            margin-left: 10px;
+            border-bottom: 1px solid;
+
+            &:hover {
+                color: var(--primary-text-color);
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+
 }
 
 
@@ -37,6 +71,7 @@
 @media only screen and (max-width: 768px) {
     .product-teaser {
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
         margin-bottom: 0px;
         padding-bottom: 20px;
@@ -45,6 +80,7 @@
         .product-teaser__image {
             margin-right: 15px;
             width: 150px;
+            height: 100px;
         }
         .product-teaser__price {
             margin-bottom: 0.75em;
