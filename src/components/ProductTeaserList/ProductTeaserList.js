@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import ProductTeaser from '../ProductTeaser/ProductTeaser';
 import Button from '../Button/Button';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 const ProductTeaserList = ({ products, handleAddToCartClick }) => (
     <section className="product-teaser-section">
@@ -16,23 +18,32 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
             {
                 products.map((product, index) => {
                     return (
-                        <ProductTeaser
-                        key={index}
-                        id={product.id}
-                        name={product.name}
-                        image={product.image}
-                        description={product.description}
-                        price={product.price}
-                        >
-                            <Button onClick={() => {
-                                handleAddToCartClick(product);
-                            }}>Add to Cart</Button>
-                            <div>
-                                <Link to={`/products/${product.id}`} className="cta-details">
-                                    Details
-                                </Link>
-                            </div>
-                        </ProductTeaser>
+                        <ReactCSSTransitionGroup
+                            transitionName="fade"
+                            transitionAppear={true}
+                            transitionEnterTimeout={500}
+                            transitionLeaveTimeout={300}>
+
+                            <ProductTeaser
+                                key={index}
+                                id={product.id}
+                                name={product.name}
+                                image={product.image}
+                                description={product.description}
+                                price={product.price}
+                                >
+                                <Button onClick={() => {
+                                    handleAddToCartClick(product);
+                                }}>Add to Cart</Button>
+                                <div>
+                                    <Link to={`/products/${product.id}`} className="cta-details">
+                                        Details
+                                    </Link>
+                                </div>
+                            </ProductTeaser>
+          
+                        </ReactCSSTransitionGroup>
+                        
                     )
                 })
             }
