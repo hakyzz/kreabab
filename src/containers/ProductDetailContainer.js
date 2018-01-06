@@ -1,21 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getProductById } from '../selectors/product'
-import { fetchProductById } from '../actionCreators';
+import { fetchProductById, addToCart } from '../actionCreators';
 
+import { getProductById } from '../selectors/product'
 import ProductDetail from '../components/ProductDetail/ProductDetail';
 
+
 class ProductDetailContainer extends Component {
+
     componentDidMount () {
         this.props.fetchProductById(this.props.id)
     }
+
+    handleAddToCartClick = (product) => {
+        this.props.addToCart(product);
+    };
 
     renderContent () {
         const {product} = this.props
         return (
             <ProductDetail
-            product={product} 
+            product={product}
+            handleAddToCartClick={this.handleAddToCartClick}
             />
         )
     }
@@ -39,7 +46,11 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    fetchProductById
+    fetchProductById,
+    addToCart
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetailContainer)
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+)(ProductDetailContainer);

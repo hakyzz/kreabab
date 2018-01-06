@@ -1,8 +1,10 @@
 import React from 'react';
 import './ProductDetail.css';
 
+import Button from '../Button/Button';
 
-const ProductDetail = ({ product }) => (
+
+const ProductDetail = ({ product, handleAddToCartClick }) => (
 
     <div className="product-detail">
         <div className="product-detail__content">
@@ -10,10 +12,12 @@ const ProductDetail = ({ product }) => (
             <p className="product-detail__price">{product.price}</p>
             <p className="product-detail__description">{product.description}</p>
             <div>
-                ### TODO: Product Eigenschaften ###
+                { /*### TODO: Product Eigenschaften ###*/ }
             </div>
             <div className="product-detail__button">
-                ### TODO: Add to Cart Button ###
+                <Button onClick={() => {
+                    handleAddToCartClick(product);
+                }}>Add to Cart</Button>
             </div>
         </div>
         <div className="product-detail__image">
