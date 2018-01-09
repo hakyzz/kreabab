@@ -37,26 +37,19 @@ Lorem ipsum dolor sit amet.
 ## Setup
 #### Installation
 
-
 ```
 git clone https://github.com/hakyzz/kreabab.git
 cd kreabab
 npm install
 ```
 
-In dem Projekt Verzeichnis folgende stehen folgende Scripts zur Verfügung:
-
-Projekt installieren.
-
 #### App starten
 
 ```
-git clone https://github.com/hakyzz/kreabab.git
-cd kreabab
 npm start
 ```
 
-Started die App im Entwickler Modus.
+Started die App im Entwickler Modus.<br>
 Die URL [http://localhost:3000](http://localhost:3000) wird automatisch geöffnet.
 
 Die Seite wird bei Änderungen automatisch aktualisiert.<br>
