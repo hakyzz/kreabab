@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 
 import './CartEntry.css';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import FormatPrice from '../FormatPrice/FormatPrice';
 
 
@@ -21,15 +23,14 @@ export default class CartEntry extends Component {
     }
 
     handleInputChange(event) {
-        const target = event.target; // input number
-        const quantity = target.value;
-        const itemId = target.getAttribute("id");
-        const name = target.name; //quantity
-        
+        const quantity = event.value;
+        const itemId = event.id;
+        const name = event.name; //quantity
+
         this.setState({
             [name]: quantity
         });
-    
+
         this.props.changeQuantityCart(itemId, quantity)
     }
 
@@ -37,6 +38,15 @@ export default class CartEntry extends Component {
         function onDeleteHandler(event) {
             const itemId = event.target.getAttribute("id");
             this.props.deleteFromCart(itemId);
+        }
+
+        function createNumbersArray(number, id, name) {
+            const numbersArray = [];
+            for(let i = 1; i < number; i++) {
+                numbersArray.push({value: i, label: i, id, name});
+            }
+
+            return numbersArray;
         }
 
         return (
@@ -53,15 +63,13 @@ export default class CartEntry extends Component {
                 <div className="cart-entry__controls">
                     <div className="entry-quantity">
                         <label htmlFor="entry-quantity">Anzahl:</label>
-                        <input
-                            type="number"
-                            className="entry-quantity"
-                            id={this.props.id}
-                            min="1"
-                            name="entry-quantity"
+                        <Select
+                            clearable={false}
+                            searchable={false}
                             value={this.state.quantity}
                             onChange={this.handleInputChange}
-                            />
+                            options={createNumbersArray(999, this.props.id, "entry-quantity")}
+                        />
                     </div>
                     <div className="entry-price">
                         <span><FormatPrice price={this.props.totalPrice}/></span>
