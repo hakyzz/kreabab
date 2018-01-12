@@ -2,14 +2,14 @@ import React from 'react';
 import './ProductDetail.css';
 
 import Button from '../Button/Button';
+import FormatPrice from '../FormatPrice/FormatPrice';
 
-
-const ProductDetail = ({ product, handleAddToCartClick }) => (
+const ProductDetail = ({ product, handleAddToCartClick, price }) => (
 
     <div className="product-detail">
         <div className="product-detail__content">
             <h1>{product.name}</h1>
-            <p className="product-detail__price">{product.price}</p>
+            <p className="product-detail__price"><FormatPrice price={product.price}/></p>
             <p className="product-detail__description">{product.description}</p>
             <div>
                 <p>
