@@ -45,8 +45,8 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
             </div>
             <div className="cart-list__actions">
                 <ButtonList>
-                    <Button linkName="/" className="btn cta-large secondary">Weiter Shoppen</Button>
-                    <Button linkName="/order" className="btn cta-large primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
+                    <Button linkName="/" styleName="secondary">Weiter Shoppen</Button>
+                    <Button linkName="/order" styleName="primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
                 </ButtonList>
             </div>
         </div>

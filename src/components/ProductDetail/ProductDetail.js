@@ -19,7 +19,7 @@ const ProductDetail = ({ product, handleAddToCartClick, price }) => (
                 </p>
             </div>
             <div className="product-detail__button">
-                <Button onClick={() => {
+                <Button styleName="secondary" onClick={() => {
                     handleAddToCartClick(product);
                 }}>Add to Cart</Button>
             </div>

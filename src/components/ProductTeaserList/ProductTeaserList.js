@@ -35,7 +35,7 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
                                 description={product.description}
                                 price={product.price}
                                 >
-                                <Button onClick={() => {
+                                <Button styleName="secondary" onClick={() => {
                                     handleAddToCartClick(product);
                                 }}>Add to Cart</Button>
                                 <div>
