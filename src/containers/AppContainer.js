@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import HomepageView from '../views/HomepageView';
+import ProductDetailView from '../views/ProductDetailView';
 import CartView from '../views/CartView';
 import CustomizerView from '../views/CustomizerView';
 import OrderViewContainer from './OrderViewContainer';
@@ -19,17 +20,11 @@ class App extends Component {
             <Router>
                 <div>
                     <Route exact path="/" component={HomepageView}/>
+                    <Route path='/categories/:id' component={HomepageView}/>
+                    <Route path="/products/:id" component={ProductDetailView}/>
                     <Route path="/cart" component={CartView}/>
                     <Route path="/customizer" component={CustomizerView}/>
                     <Route path="/order" component={OrderViewContainer}/>
-                    
-                    {/*<ul>*/}
-                        {/*<li><Link to="/">Home</Link></li>*/}
-                        {/*<li><Link to="/cart">Cart</Link></li>*/}
-                        {/*<li><Link to="/customizer">Customizer</Link></li>*/}
-                        {/*<li><Link to="/order">Order</Link></li>*/}
-                    {/*</ul>*/}
-                
                 </div>
             </Router>
         );

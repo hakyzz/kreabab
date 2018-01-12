@@ -1,11 +1,19 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 
 //IMPORT REDUCERS
-import { productsReducer } from './products';
-import { cartReducer } from './cart';
+import products from './products'
+import productsPage from './productsPage'
+import productPage from './productPage'
+import categories from './categories'
+import { cartReducer } from './cart'
 
 //HERE COMBINE THE REDUCERS
 export default combineReducers({
-  productList: productsReducer,
+  routing: routerReducer,
   cartList: cartReducer,
+  products,
+  productsPage,
+  productPage,
+  categories
 })

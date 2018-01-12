@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './ShoppingBag.css';
 
+import AnimateOnChange from 'react-animate-on-change';
 
 const ShoppingBag = ({ cartTotalNoOfItems, modifier }) => {
 
@@ -16,9 +17,14 @@ const ShoppingBag = ({ cartTotalNoOfItems, modifier }) => {
                         </g>
                     </g>
                 </svg>
-                <div className="shopping-bag__counter">
-                    <span>{cartTotalNoOfItems}</span>
-                </div>
+                
+                <AnimateOnChange
+                    baseClassName="shopping-bag__counter"
+                    animationClassName="shopping-bag__counter__animation"
+                    animate={cartTotalNoOfItems !== 0}>
+                        {cartTotalNoOfItems}
+                </AnimateOnChange>
+                
             </Link>
         </div>
     )

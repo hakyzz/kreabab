@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom'
 
-import { getProducts, addToCart } from '../actionCreators';
+import { fetchProducts, fetchCategories, addToCart } from '../actionCreators';
+import { getProducts } from '../selectors/product'
 
 import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList';
 
@@ -10,7 +12,9 @@ import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList
 class ProductsContainer extends Component {
     
     componentDidMount() {
-        this.props.getProducts();
+        // this.props.getProducts();
+        this.props.fetchProducts();
+        this.props.fetchCategories();
     }
 
     handleAddToCartClick = (product) => {
@@ -28,20 +32,19 @@ class ProductsContainer extends Component {
 }
 
 
-function mapStateToProps(state) {
-    return {
-        products: state.productList.products
+const mapStateToProps = (state, ownProps) => {
+    return {        
+        products: getProducts(state, ownProps)
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({
-        getProducts: getProducts,
-        addToCart: addToCart,
-    }, dispatch)
+const mapDispatchToProps = {
+    fetchProducts,
+    fetchCategories,
+    addToCart
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(ProductsContainer);
+)(ProductsContainer));
