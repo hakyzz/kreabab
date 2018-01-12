@@ -20,6 +20,7 @@ class App extends Component {
             <Router>
                 <div>
                     <Route exact path="/" component={HomepageView}/>
+                    <Route path='/categories/:id' component={HomepageView}/>
                     <Route path="/products/:id" component={ProductDetailView}/>
                     <Route path="/cart" component={CartView}/>
                     <Route path="/customizer" component={CustomizerView}/>

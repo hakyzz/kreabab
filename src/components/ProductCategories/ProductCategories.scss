@@ -1,0 +1,31 @@
+.nav-list {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    ul {
+        list-style-type: none;
+        // background-color: rgba(0,0,0,0.01);
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        
+        display: flex;
+        justify-content: flex-start;
+
+        .nav-list__item {
+            // display: inline-block;
+            padding: 1em 1em 1em 0em;
+            color: var(--secondary-text-color);
+
+            &.active {
+                color: var(--primary-text-color);
+            }
+
+            &:hover {
+                color: var(--primary-text-color);
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import { routerReducer } from 'react-router-redux'
 import products from './products'
 import productsPage from './productsPage'
 import productPage from './productPage'
+import categories from './categories'
 import { cartReducer } from './cart'
 
 //HERE COMBINE THE REDUCERS
@@ -13,5 +14,6 @@ export default combineReducers({
   cartList: cartReducer,
   products,
   productsPage,
-  productPage
+  productPage,
+  categories
 })

@@ -3,6 +3,7 @@ import './ProductTeaserList.css';
 
 import { Link } from 'react-router-dom'
 
+import ProductCategories from '../ProductCategories/ProductCategories'
 import ProductTeaser from '../ProductTeaser/ProductTeaser';
 import Button from '../Button/Button';
 
@@ -12,15 +13,17 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const ProductTeaserList = ({ products, handleAddToCartClick }) => (
     <section className="product-teaser-section">
         <div className="product-teaser-section__title">
-            <h2>Hauptgerichte</h2>
+            <ProductCategories />
         </div>
         <div className="product-teaser-list">
             {
                 products.map((product, index) => {
                     return (
                         <ReactCSSTransitionGroup
+                            key={index}
                             transitionName="fade"
                             transitionAppear={true}
+                            transitionAppearTimeout={500}
                             transitionEnterTimeout={500}
                             transitionLeaveTimeout={300}>
 
