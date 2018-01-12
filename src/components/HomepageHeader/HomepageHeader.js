@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './HomepageHeader.css';
 
+import Button from '../Button/Button';
 
 class HomepageHeader extends Component {
 
@@ -11,6 +12,9 @@ class HomepageHeader extends Component {
                     <h1>Willkommen bei Kreabab</h1>
                     <p>Unser digitaler Assistent nimmt gerne deine Bestellung auf.<br/>
                         Was möchten Sie bestellen ?</p>
+                </div>
+                <div className="intro-header__cta">
+                    <Button linkName="/customizer" styleName="primary">Kebab Konfigurieren</Button>
                 </div>
             </header>
         );

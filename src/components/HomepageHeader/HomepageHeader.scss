@@ -1,7 +1,12 @@
 .intro-header {
-    box-sizing: border-box;
+
+    // border: 1px solid red;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
 
     .intro-header__content {
+        flex: 2;
         height: 35vh;
         min-height: 300px;
         padding-bottom: 40px;
@@ -21,17 +26,32 @@
     
     }
 
+    .intro-header__cta {
+        flex: 1;
+        align-self: flex-end;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
 }
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
     .intro-header {
+        flex-direction: column;
+
         .intro-header__content {
+            flex: 1;
             padding-bottom: 20px;
 
             p {
                 line-height: 1.4rem;
             }
+        }
+        .intro-header__cta {
+            flex: 0;
+            align-self: flex-start;
+            padding-bottom: 20px;
         }
     }
 
