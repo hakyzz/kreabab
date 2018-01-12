@@ -27,7 +27,7 @@ const ProductCategories = ({categories, activeCategoryId}) => {
       })
   
       return (
-        <li>
+        <li key={index}>
           <Link
             to={`/categories/${category.id}`}
             className={linkClass}
