@@ -40,7 +40,11 @@ export function cartReducer(state = getInitialState(), action) {
                     image: action.payload.image,
                     price: action.payload.price,
                     totalPrice: action.payload.price,
-                    quantity: 1
+                    quantity: 1,
+                    options: {
+                        bred: action.payload.options.bred,
+                        sauce: action.payload.options.sauce
+                    }
                 };
                 newState.push(newItem);
                 let newState1 = updateTotal(newState);

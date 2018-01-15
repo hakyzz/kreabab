@@ -11,13 +11,6 @@ const ProductDetail = ({ product, handleAddToCartClick, price }) => (
             <h1>{product.name}</h1>
             <p className="product-detail__price"><FormatPrice price={product.price}/></p>
             <p className="product-detail__description">{product.description}</p>
-            <div>
-                <p>
-                    ### TODO: Produkt Eigenschaften ###<br />
-                    Brot: {product.bred}<br />
-                    Sauce: {product.sauce}<br />
-                </p>
-            </div>
             <div className="product-detail__button">
                 <Button styleName="secondary" onClick={() => {
                     handleAddToCartClick(product);

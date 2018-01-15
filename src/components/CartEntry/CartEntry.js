@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import * as R from 'ramda';
 
 import './CartEntry.css';
 import Select from 'react-select';
@@ -34,6 +35,28 @@ export default class CartEntry extends Component {
         this.props.changeQuantityCart(itemId, quantity)
     }
 
+    renderAttribute() {
+        
+        const options = this.props.productOptions;
+        
+        if(!R.isEmpty(options)) {
+
+            return Object.entries(this.props.productOptions).map(([key, value], i) => {
+                return (
+                    <span key={key}>
+                        {value}
+                    </span>
+                )
+            })
+            // console.log(this.props.productOptions)
+
+        } else {
+            return (
+                <span>Standard Variante</span>
+            )
+        }
+    }
+
     render() {
         function onDeleteHandler(event) {
             const itemId = event.target.getAttribute("id");
@@ -57,7 +80,7 @@ export default class CartEntry extends Component {
                     </div>
                     <div className="cart-entry__details">
                         <h3>{this.props.name}</h3>
-                        <p>### Attribute des Produkts ###</p>
+                        <p>{this.renderAttribute()}</p>
                     </div>
                 </div>
                 <div className="cart-entry__controls">

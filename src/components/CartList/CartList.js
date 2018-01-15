@@ -21,6 +21,7 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
             quantity={cartItem.quantity}
             totalPrice={cartItem.totalPrice}
             deleteFromCart={deleteFromCart}
+            productOptions={cartItem.options}
             changeQuantityCart={changeQuantityCart}
             />
         ))

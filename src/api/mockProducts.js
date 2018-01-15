@@ -6,9 +6,10 @@ export default [
         image: "/uploads/01.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 12.90,
-        bred: "Taschenbrot",
-        toppings: [],
-        sauce: []
+        options: {
+            bred: ["Fladenbrot", "Taschenbrot"],
+            sauce: ["Cocktailsauce", "Joghurtsauce", "Chilli Sauce"]
+        }
     },
     {
         id: 2,
@@ -17,9 +18,10 @@ export default [
         image: "/uploads/02.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Fladenbrot",
-        toppings: [],
-        sauce: []
+        options: {
+            bred: ["Taschenbrot", "Fladenbrot"],
+            sauce: ["Cocktailsauce", "Joghurtsauce", "Chilli Sauce"]
+        }
     },
     {
         id: 3,
@@ -28,9 +30,10 @@ export default [
         image: "/uploads/03.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 15.90,
-        bred: "Taschenbrot",
-        toppings: [],
-        sauce: []
+        options: {
+            bred: [],
+            sauce: ["Cocktailsauce", "Joghurtsauce", "Chilli Sauce"]
+        }
     },
     {
         id: 4,
@@ -39,9 +42,7 @@ export default [
         image: "/uploads/04.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 20.45,
-        bred: "Taschenbrot",
-        toppings: [],
-        sauce: []
+        options: {}
     },
     {
         id: 5,
@@ -50,9 +51,10 @@ export default [
         image: "/uploads/01.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Taschenbrot",
-        toppings: [],
-        sauce: []
+        options: {
+            bred: ["Taschenbrot", "Fladenbrot"],
+            sauce: ["Cocktailsauce", "Joghurtsauce", "Chilli Sauce"]
+        }
     },
     {
         id: 6,
@@ -61,9 +63,10 @@ export default [
         image: "/uploads/02.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Taschenbrot",
-        toppings: [],
-        sauce: []
+        options: {
+            bred: ["Taschenbrot", "Fladenbrot"],
+            sauce: ["Cocktailsauce", "Joghurtsauce", "Chilli Sauce"]
+        }
     },
     {   // Salate
         id: 10,
@@ -71,7 +74,8 @@ export default [
         name: "Gemischter Salat",
         image: "/uploads/10.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 12.90
+        price: 12.90,
+        options: {}
     },
     {
         id: 11,
@@ -79,7 +83,8 @@ export default [
         name: "Griechischer Salat",
         image: "/uploads/11.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 12.90
+        price: 12.90,
+        options: {}
     },
     {
         id: 12,
@@ -87,7 +92,8 @@ export default [
         name: "Ceasar Salad",
         image: "/uploads/12.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 12.90
+        price: 12.90,
+        options: {}
     },
     {
         id: 13,
@@ -95,7 +101,8 @@ export default [
         name: "Caprese",
         image: "/uploads/13.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 12.90
+        price: 12.90,
+        options: {}
     },
     {   // Dessert
         id: 20,
@@ -103,7 +110,8 @@ export default [
         name: "Tiramisu",
         image: "/uploads/20.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 10.00
+        price: 10.00,
+        options: {}
     },
     {
         id: 21,
@@ -111,7 +119,8 @@ export default [
         name: "Vanille Cornet",
         image: "/uploads/21.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.50
+        price: 4.50,
+        options: {}
     },
     {
         id: 22,
@@ -119,7 +128,8 @@ export default [
         name: "Erdbeer Cornet",
         image: "/uploads/24.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.50
+        price: 4.50,
+        options: {}
     },
     {
         id: 23,
@@ -127,7 +137,8 @@ export default [
         name: "Sorbet Lemon & Lime",
         image: "/uploads/22.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.90
+        price: 4.90,
+        options: {}
     },
     {
         id: 24,
@@ -135,7 +146,8 @@ export default [
         name: "Sorbet Zuger-Kirsch",
         image: "/uploads/23.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.90
+        price: 4.90,
+        options: {}
     },
     {   // Getraenke
         id: 31,
@@ -143,7 +155,8 @@ export default [
         name: "Bier Calanda 5dl",
         image: "/uploads/30.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 5.80
+        price: 5.80,
+        options: {}
     },
     {
         id: 32,
@@ -151,7 +164,8 @@ export default [
         name: "Mineralwasser 5dl",
         image: "/uploads/31.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.00
+        price: 4.00,
+        options: {}
     },
     {
         id: 33,
@@ -159,7 +173,8 @@ export default [
         name: "Coca Cola 5dl",
         image: "/uploads/32.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.50
+        price: 4.50,
+        options: {}
     },
     {
         id: 34,
@@ -167,7 +182,8 @@ export default [
         name: "Fanta 5dl",
         image: "/uploads/33.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.50
+        price: 4.50,
+        options: {}
     },
     {
         id: 35,
@@ -175,7 +191,8 @@ export default [
         name: "Sprite 5dl",
         image: "/uploads/34.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 4.50
+        price: 4.50,
+        options: {}
     },
     {
         id: 36,
@@ -183,7 +200,8 @@ export default [
         name: "Red Bull 3dl",
         image: "/uploads/35.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 5.50
+        price: 5.50,
+        options: {}
     },
     {
         id: 37,
@@ -191,6 +209,7 @@ export default [
         name: "Rotwein Staatsschreiber",
         image: "/uploads/36.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-        price: 12.90
+        price: 12.90,
+        options: {}
     }
 ]
