@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import './ProductCart.css';
+import FormatPrice from "../FormatPrice/FormatPrice";
+import { menu } from "../../defs/nav"
+
+class ProductCart extends Component {
+
+    getNextMenuItem () {
+        const index = menu.findIndex(menuItem => menuItem.id === this.props.activeCategoryId);
+        return menu[index + 1];
+    }
+
+    handleClick = () => {
+        const nextMenuItem = this.getNextMenuItem()
+
+        if (nextMenuItem) {
+            this.props.history.push(nextMenuItem.href)
+        } else {
+            this.props.addToCart(this.props.product)
+            this.props.history.push('/cart')
+        }
+
+    }
+
+    render() {
+        const menuItem = this.getNextMenuItem()
+        const menuItemLabel = menuItem ? `Weiter zu ${menuItem.label}` : `Add to Cart`;
+
+        return (
+            <div className="product-cart">
+                <div className="product-cart__quantity"><FormatPrice price={this.props.price}/></div>
+                <div onClick={this.handleClick} className="product-cart__forward-link">{menuItemLabel}</div>
+            </div>
+        );
+    }
+}
+
+export default ProductCart;

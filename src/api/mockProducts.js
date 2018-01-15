@@ -192,5 +192,13 @@ export default [
         image: "/uploads/36.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 12.90
+    },
+    {
+        id: 38,
+        categoryId: "0",
+        name: "Kreabab",
+        image: "/uploads/02.jpg",
+        description: "Custom Kreabab Kebab",
+        price: 0.00
     }
 ]

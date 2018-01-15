@@ -12,6 +12,7 @@ import {
     Route
     //Link
 } from 'react-router-dom';
+import Redirect from "react-router-dom/es/Redirect";
 
 class App extends Component {
 
@@ -23,7 +24,7 @@ class App extends Component {
                     <Route path='/categories/:id' component={HomepageView}/>
                     <Route path="/products/:id" component={ProductDetailView}/>
                     <Route path="/cart" component={CartView}/>
-                    <Route path="/customizer" component={CustomizerView}/>
+                    <Route path="/customizer/:filter" component={CustomizerView} />
                     <Route path="/order" component={OrderViewContainer}/>
                 </div>
             </Router>
