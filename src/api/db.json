@@ -72,7 +72,10 @@
             "name": "Gemischter Salat",
             "image": "/uploads/10.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 12.90
+            "price": 12.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 11,
@@ -80,7 +83,10 @@
             "name": "Griechischer Salat",
             "image": "/uploads/11.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 12.90
+            "price": 12.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 12,
@@ -88,7 +94,10 @@
             "name": "Ceasar Salad",
             "image": "/uploads/12.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 12.90
+            "price": 12.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 13,
@@ -96,7 +105,10 @@
             "name": "Caprese",
             "image": "/uploads/13.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 12.90
+            "price": 12.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 20,
@@ -104,7 +116,10 @@
             "name": "Tiramisu",
             "image": "/uploads/20.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 10.00
+            "price": 10.00,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 21,
@@ -112,7 +127,10 @@
             "name": "Vanille Cornet",
             "image": "/uploads/21.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.50
+            "price": 4.50,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": "22",
@@ -120,7 +138,10 @@
             "name": "Erdbeer Cornet",
             "image": "/uploads/24.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": "4.50"
+            "price": "4.50",
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 23,
@@ -128,7 +149,10 @@
             "name": "Sorbet Lemon & Lime",
             "image": "/uploads/22.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.90
+            "price": 4.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 24,
@@ -136,7 +160,10 @@
             "name": "Sorbet Zuger-Kirsch",
             "image": "/uploads/23.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.90
+            "price": 4.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 31,
@@ -144,7 +171,10 @@
             "name": "Bier Calanda 5dl",
             "image": "/uploads/30.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 5.80
+            "price": 5.80,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 32,
@@ -152,7 +182,10 @@
             "name": "Mineralwasser 5dl",
             "image": "/uploads/31.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": "4.00"
+            "price": "4.00",
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 33,
@@ -160,7 +193,10 @@
             "name": "Coca Cola 5dl",
             "image": "/uploads/32.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.50
+            "price": 4.50,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 34,
@@ -168,7 +204,10 @@
             "name": "Fanta 5dl",
             "image": "/uploads/33.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.50
+            "price": 4.50,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 35,
@@ -176,7 +215,10 @@
             "name": "Sprite 5dl",
             "image": "/uploads/34.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 4.50
+            "price": 4.50,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 36,
@@ -184,7 +226,10 @@
             "name": "Red Bull 3dl",
             "image": "/uploads/35.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 5.50
+            "price": 5.50,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 37,
@@ -192,7 +237,10 @@
             "name": "Rotwein Staatsschreiber",
             "image": "/uploads/36.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-            "price": 12.90
+            "price": 12.90,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         },
         {
             "id": 38,
@@ -200,7 +248,10 @@
             "name": "Kreabab",
             "image": "/uploads/02.jpg",
             "description": "Custom Kreabab Kebab",
-            "price": 0.00
+            "price": 0.00,
+            "bread": "",
+            "toppings": [],
+            "sauce": []
         }
   ],
   "categories": [

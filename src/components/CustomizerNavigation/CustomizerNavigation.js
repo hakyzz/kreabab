@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { menu } from "../../defs/nav"
 
 class CustomizerNavigation extends Component {
-
     render() {
         const { filter } = this.props;
 

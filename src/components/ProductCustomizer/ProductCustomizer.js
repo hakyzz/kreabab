@@ -15,7 +15,6 @@ class ProductCustomizer extends Component {
         sauces: []
     };
 
-
     componentDidMount() {
         this.props.fetchProducts();
         this.setDefaultSelection();
@@ -33,8 +32,6 @@ class ProductCustomizer extends Component {
             this.handleIngredientItemClick(CATEGORY_IDS.BREAD, categories.find(cat => cat.id === CATEGORY_IDS.BREAD).items[0].title);
         }
     }
-
-
 
     calculatePrice () {
         if (this.state.bread === '') {
