@@ -43,9 +43,15 @@ cd kreabab
 npm install
 ```
 
+Install JSON Mock Server globally:
+```
+npm install -g json-server
+```
+
 #### App starten
 
 ```
+npm run server
 npm start
 ```
 

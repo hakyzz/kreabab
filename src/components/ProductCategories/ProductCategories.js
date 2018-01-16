@@ -17,14 +17,12 @@ import {
 
 const ProductCategories = ({categories, activeCategoryId}) => {
 
-    // console.log('active cat', activeCategoryId);
     const renderCategory = (category, index) => {
-      const getActiveState = R.propEq('id', activeCategoryId)
-
+      const getActiveState = R.propEq('id', activeCategoryId);
       const linkClass = classNames({
         'nav-list__item': true,
         'active': getActiveState(category)
-      })
+      });
   
       return (
         <li key={index}>
@@ -37,13 +35,13 @@ const ProductCategories = ({categories, activeCategoryId}) => {
           </Link>
         </li>
       )
-    }
+    };
   
     const renderAllCategory = () => {
       const linkClass = classNames({
         'nav-list__item': true,
         'active': R.isNil(activeCategoryId)
-      })
+      });
   
       return (
         <li>
@@ -55,7 +53,7 @@ const ProductCategories = ({categories, activeCategoryId}) => {
           </Link>
         </li>
       )
-    }
+    };
   
     return (
         <div className="nav-list">
@@ -65,13 +63,13 @@ const ProductCategories = ({categories, activeCategoryId}) => {
           </ul>
         </div>
     )
-}
+};
 
 
 const mapStateToProps = (state, ownProps) => ({
     categories: getCategories(state),
     activeCategoryId: getActiveCategoryId(ownProps)
-})
+});
   
 export default withRouter(connect(
     mapStateToProps, 

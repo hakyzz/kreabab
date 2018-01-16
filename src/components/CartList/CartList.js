@@ -10,27 +10,36 @@ import FormatPrice from '../FormatPrice/FormatPrice';
 
 const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
     const hasProducts = cart.length > 0;
-    const nodes = hasProducts ? (
-        cart.map((cartItem, index) => (
-            <CartEntry
-            key={index}
-            id={cartItem.id}
-            name={cartItem.name}
-            image={cartItem.image}
-            price={cartItem.price}
-            quantity={cartItem.quantity}
-            totalPrice={cartItem.totalPrice}
-            deleteFromCart={deleteFromCart}
-            productOptions={cartItem.options}
-            changeQuantityCart={changeQuantityCart}
+    let nodes = null;
+    if (hasProducts) {
+
+        nodes = cart.map((cartItem, index) => {
+
+            return <CartEntry
+                key={index}
+                id={cartItem.id}
+                name={cartItem.name}
+                image={cartItem.image}
+                price={cartItem.price}
+                quantity={cartItem.quantity}
+                totalPrice={cartItem.totalPrice}
+                deleteFromCart={deleteFromCart}
+                changeQuantityCart={changeQuantityCart}
+                productOptions={cartItem.options}
+                bread={cartItem.bread || ''}
+                sauces={cartItem.sauces || []}
+                toppings={cartItem.toppings || []}
             />
-        ))
-    ) : (
-        <div className="cart-list__empty-state">
-            <img src={EmptyStateImg} className="cart-list__empty-state-img" alt="Keine Produkte vorhanden"/>
-            <p className="cart-list__empty-state-text">Keine Produkte vorhanden</p>
-        </div>
-    )
+        })
+
+    } else {
+        nodes = (
+            <div className="cart-list__empty-state">
+                <img src={EmptyStateImg} className="cart-list__empty-state-img" alt="Keine Produkte vorhanden"/>
+                <p className="cart-list__empty-state-text">Keine Produkte vorhanden</p>
+            </div>
+        )
+    }
 
     return (
         <div className="cart-list">
@@ -47,11 +56,11 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
             <div className="cart-list__actions">
                 <ButtonList>
                     <Button linkName="/" styleName="secondary">Weiter Shoppen</Button>
-                    <Button linkName="/order" styleName="primary">Bestellen&nbsp;&nbsp;&nbsp;></Button>
+                    <Button linkName="/order" styleName="primary">Bestellen</Button>
                 </ButtonList>
             </div>
         </div>
     )
-}
+};
 
 export default CartList;

@@ -5,6 +5,8 @@
   "dependencies": {
     "animated": "^0.2.1",
     "classnames": "^2.2.5",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "kreabab-react-scripts": "1.0.5",
     "lodash": "^4.17.4",
     "node-sass-chokidar": "0.0.3",
@@ -19,6 +21,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "react-select": "^1.1.0",
+    "react-test-renderer": "^15.6.2",
     "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
@@ -26,6 +29,7 @@
     "superagent": "^3.8.2"
   },
   "scripts": {
+    "server": "json-server --watch src/api/db.json --port 3004",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",

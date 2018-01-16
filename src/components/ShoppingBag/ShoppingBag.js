@@ -28,7 +28,6 @@ const ShoppingBag = ({ cartTotalNoOfItems, modifier }) => {
             </Link>
         </div>
     )
-
-}
+};
 
 export default ShoppingBag;

@@ -9,7 +9,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className="site-footer">
-                <p>©{(new Date().getFullYear())} - Kreabab Döner Shop | <Link to="/">www.kreabab.shop</Link></p>
+                <p>&copy;{(new Date().getFullYear())} - Kreabab Döner Shop | <Link to="/">www.kreabab.shop</Link></p>
             </footer>
         );
     }

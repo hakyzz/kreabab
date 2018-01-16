@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import ProductOverview from '../components/ProductOverview/ProductOverview';
-import ProductCustomizer from '../components/ProductCustomizer/ProductCustomizer';
+import ProductCustomizer from '../containers/ProductCustomizer';
 
 class CustomizerView extends Component {
+
     render() {
-        console.log(this.props.location.pathname);
+        const { filter } = this.props.match.params;
 
         return (
             <div className="customizer">
                 <ProductOverview />
-                <ProductCustomizer view={this.props.location.query} />
+                <ProductCustomizer filter={filter} history={this.props.history} />
             </div>
         );
     }

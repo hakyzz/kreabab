@@ -1,28 +1,32 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './CustomizerNavigation.css';
+import Link from "react-router-dom/es/Link";
+import { menu } from "../../defs/nav"
 
 class CustomizerNavigation extends Component {
 
     render() {
+        const { filter } = this.props;
+
         return (
             <div className="customizer-navigation">
                 <ul className="customizer-navigation__list">
-                    <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="/customizer/:bread">Brot</a>
-                    </li>
-                    <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="/customizer/:ingredients">Zutaten</a>
-                    </li>
-                    <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="/customizer/:sauce">Sauce</a>
-                    </li>
-                    <li className="customizer-navigation__item">
-                        <a className="customizer-navigation__item-link" href="/customizer/:extras">Extras</a>
-                    </li>
+                    {menu.map(menuItem => {
+                        return (
+                            <li key={menuItem.id} className="customizer-navigation__item">
+                                <Link className={"customizer-navigation__item-link" + (filter === menuItem.id ? ' active' : '')} to={menuItem.href}>{menuItem.label}</Link>
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         );
     }
 }
+
+CustomizerNavigation.propTypes = {
+    filter: PropTypes.string,
+};
 
 export default CustomizerNavigation;

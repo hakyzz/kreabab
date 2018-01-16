@@ -18,6 +18,7 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
         <div className="product-teaser-list">
             {
                 products.map((product, index) => {
+
                     return (
                         <ReactCSSTransitionGroup
                             key={index}
@@ -46,12 +47,12 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
                             </ProductTeaser>
           
                         </ReactCSSTransitionGroup>
-                        
+
                     )
                 })
             }
         </div>
     </section>
-)
+);
 
 export default ProductTeaserList;

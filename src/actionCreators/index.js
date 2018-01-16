@@ -1,7 +1,5 @@
-// import { getProducts } from './productsAction';
-import { 
+import {
     fetchProducts,
-    fetchProductById,
     fetchCategories
 } from './productsAction';
 
@@ -13,10 +11,8 @@ import {
 } from './cartActions';
 
 
-export { 
-    // getProducts,
+export {
     fetchProducts,
-    fetchProductById,
     fetchCategories,
     addToCart, 
     changeQuantityCart,

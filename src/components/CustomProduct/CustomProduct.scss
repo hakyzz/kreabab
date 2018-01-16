@@ -1,9 +1,19 @@
 .custom-product {
-  padding-top: 156px;
+  padding-top: 20px;
   text-align: center;
 
   &__image {
-    width: 350px;
+    width: 200px;
     padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-product {
+    padding-top: 156px;
+
+    &__image {
+      width: 350px;
+    }
   }
 }

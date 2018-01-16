@@ -14,7 +14,7 @@ class HomepageHeader extends Component {
                         Was möchten Sie bestellen ?</p>
                 </div>
                 <div className="intro-header__cta">
-                    <Button linkName="/customizer" styleName="primary">Kebab Konfigurieren</Button>
+                    <Button linkName="/customizer/bread" styleName="primary">Kebab Konfigurieren</Button>
                 </div>
             </header>
         );

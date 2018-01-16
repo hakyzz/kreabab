@@ -1,0 +1,15 @@
+.product-cart {
+  background: var(--primary-color);
+  color: var(--white);
+  width: 100%;
+  min-height: min-content;
+  padding: 24px 30px;
+  margin-top: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &__forward-link {
+    cursor: pointer;
+  }
+}
