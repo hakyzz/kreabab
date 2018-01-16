@@ -19,7 +19,6 @@ const ProductCategories = ({categories, activeCategoryId}) => {
 
     const renderCategory = (category, index) => {
       const getActiveState = R.propEq('id', activeCategoryId);
-
       const linkClass = classNames({
         'nav-list__item': true,
         'active': getActiveState(category)

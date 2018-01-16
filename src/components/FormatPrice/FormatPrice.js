@@ -7,7 +7,7 @@ class FormatPrice extends Component {
     render() {
 
         let price = this.props.price;
-        price = price.toFixed(2);
+        price = parseFloat(price).toFixed(2);
 
         return (
             <span className="format-price">
@@ -18,7 +18,7 @@ class FormatPrice extends Component {
 }
 
 FormatPrice.propTypes = {
-    price: PropTypes.number,
+    price: PropTypes.any,
 };
 
 export default FormatPrice;

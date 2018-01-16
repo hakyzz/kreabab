@@ -14,6 +14,12 @@ import {
 
 class App extends Component {
 
+    componentDidMount() {
+        this.props.fetchProducts();
+        this.props.fetchCategories();
+    }
+
+
     render() {
         return (
             <Router>

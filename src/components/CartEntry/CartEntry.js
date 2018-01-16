@@ -99,8 +99,8 @@ CartEntry.propTypes = {
     bread: PropTypes.string,
     toppings: PropTypes.array,
     sauces: PropTypes.array,
-    id: PropTypes.number,
-    totalPrice: PropTypes.number
+    id: PropTypes.any,
+    totalPrice: PropTypes.any
 };
 
 export default CartEntry;

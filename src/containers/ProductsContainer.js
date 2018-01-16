@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
-import { fetchProducts, fetchCategories, addToCart } from '../actionCreators';
+import { addToCart } from '../actionCreators';
 import { getProducts } from '../selectors/product'
 
 import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList';
 
 
 class ProductsContainer extends Component {
-    
-    componentDidMount() {
-        this.props.fetchProducts();
-        this.props.fetchCategories();
-    }
 
     handleAddToCartClick = (product) => {
         this.props.addToCart(product);
@@ -36,8 +31,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = {
-    fetchProducts,
-    fetchCategories,
     addToCart
 };
 
