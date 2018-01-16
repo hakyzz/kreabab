@@ -6,7 +6,7 @@ export default [
         image: "/uploads/01.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 12.90,
-        bred: "Taschenbrot",
+        bread: "Taschenbrot",
         toppings: [],
         sauce: []
     },
@@ -17,7 +17,7 @@ export default [
         image: "/uploads/02.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Fladenbrot",
+        bread: "Fladenbrot",
         toppings: [],
         sauce: []
     },
@@ -28,7 +28,7 @@ export default [
         image: "/uploads/03.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 15.90,
-        bred: "Taschenbrot",
+        bread: "Taschenbrot",
         toppings: [],
         sauce: []
     },
@@ -39,7 +39,7 @@ export default [
         image: "/uploads/04.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 20.45,
-        bred: "Taschenbrot",
+        bread: "Taschenbrot",
         toppings: [],
         sauce: []
     },
@@ -50,7 +50,7 @@ export default [
         image: "/uploads/01.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Taschenbrot",
+        bread: "Taschenbrot",
         toppings: [],
         sauce: []
     },
@@ -61,7 +61,7 @@ export default [
         image: "/uploads/02.jpg",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
         price: 9.90,
-        bred: "Taschenbrot",
+        bread: "Taschenbrot",
         toppings: [],
         sauce: []
     },
@@ -201,4 +201,4 @@ export default [
         description: "Custom Kreabab Kebab",
         price: 0.00
     }
-]
+];

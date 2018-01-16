@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './IngredientsList.css';
 
 class IngredientsList extends Component {
@@ -29,5 +30,11 @@ class IngredientsList extends Component {
         }
     }
 }
+
+IngredientsList.propTypes = {
+    children: PropTypes.array,
+    type: PropTypes.string,
+    title: PropTypes.string
+};
 
 export default IngredientsList;

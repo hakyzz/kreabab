@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './FormatPrice.css';
 
 class FormatPrice extends Component {
@@ -15,5 +16,9 @@ class FormatPrice extends Component {
         );
     }
 }
+
+FormatPrice.propTypes = {
+    price: PropTypes.number,
+};
 
 export default FormatPrice;

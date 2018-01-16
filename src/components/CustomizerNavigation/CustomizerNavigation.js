@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './CustomizerNavigation.css';
 import Link from "react-router-dom/es/Link";
 import { menu } from "../../defs/nav"
@@ -23,5 +24,9 @@ class CustomizerNavigation extends Component {
         );
     }
 }
+
+CustomizerNavigation.propTypes = {
+    filter: PropTypes.string,
+};
 
 export default CustomizerNavigation;

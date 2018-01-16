@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import { fetchProductById, addToCart } from '../actionCreators';
-
 import { getProductById } from '../selectors/product'
 import ProductDetail from '../components/ProductDetail/ProductDetail';
-
 
 class ProductDetailContainer extends Component {
 
@@ -18,7 +15,7 @@ class ProductDetailContainer extends Component {
     };
 
     renderContent () {
-        const {product} = this.props
+        const {product} = this.props;
         return (
             <ProductDetail
             product={product}
@@ -28,8 +25,7 @@ class ProductDetailContainer extends Component {
     }
 
     render () {
-        const {product} = this.props
-        // console.log('detailseite product', product);
+        const {product} = this.props;
         return (
             <div>
                 {product && this.renderContent()}
@@ -43,12 +39,12 @@ const mapStateToProps = state => {
         urlId: state.id,
         product: getProductById(state, state.productPage.id)
     }
-}
+};
 
 const mapDispatchToProps = {
     fetchProductById,
     addToCart
-}
+};
 
 export default connect(
     mapStateToProps, 

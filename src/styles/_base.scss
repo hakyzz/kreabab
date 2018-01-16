@@ -157,8 +157,12 @@ a {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 }
 
-
+@media (min-width: 768px) {
+    .customizer {
+        flex-flow: row nowrap;
+    }
+}
 

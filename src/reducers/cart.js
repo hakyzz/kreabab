@@ -25,13 +25,15 @@ export function cartReducer(state = getInitialState(), action) {
                     if (element.id === action.payload.id) {
                         element.quantity++;
                         element.totalPrice = Number(element.price) * element.quantity;
+                        element.toppings = action.payload.toppings;
+                        element.sauces = action.payload.sauces;
+                        element.bread = action.payload.bread;
                     }
                     element.totalPrice = Math.round(element.totalPrice * 100) / 100;
                     return element;
                 });
                 let newState1 = updateTotal(newState);
                 return updateTotalNumberOfProducts(newState1);
-
             } else {
                 let newState = [...state];
                 const newItem = {
@@ -40,7 +42,10 @@ export function cartReducer(state = getInitialState(), action) {
                     image: action.payload.image,
                     price: action.payload.price,
                     totalPrice: action.payload.price,
-                    quantity: 1
+                    quantity: 1,
+                    toppings: action.payload.toppings,
+                    sauces: action.payload.sauces,
+                    bread: action.payload.bread
                 };
                 newState.push(newItem);
                 let newState1 = updateTotal(newState);
@@ -50,8 +55,7 @@ export function cartReducer(state = getInitialState(), action) {
         case CHANGE_QUANTITY_CART:
             let newState3 = [...state];
             newState3 = state.map( element => {
-                // eslint-disable-next-line
-                if (element.id === parseInt(action.id)) {
+                if (element.id === parseInt(action.id, 10)) {
                     element.quantity = action.quantity;
                     element.totalPrice = Math.round((Number(element.price) * element.quantity) * 100) / 100;
                 }
@@ -64,8 +68,7 @@ export function cartReducer(state = getInitialState(), action) {
 
         case DELETE_FROM_CART:
             let newState4 = [...state];
-            // eslint-disable-next-line
-            newState4 = state.filter( element => element.id !== parseInt(action.id));
+            newState4 = state.filter( element => element.id !== parseInt(action.id, 10));
 
             newState4 = updateTotal(newState4);
             newState4 = updateTotalNumberOfProducts(newState4);

@@ -11,6 +11,10 @@
     width: 100%;
     cursor: pointer;
     padding-right: 35px;
+
+    &--symbol {
+      padding-right: 0;
+    }
   }
 
   &__image {

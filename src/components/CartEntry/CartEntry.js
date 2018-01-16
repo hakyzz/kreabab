@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './CartEntry.css';
 import Select from 'react-select';
@@ -7,7 +7,7 @@ import 'react-select/dist/react-select.css';
 import FormatPrice from '../FormatPrice/FormatPrice';
 
 
-export default class CartEntry extends Component {
+class CartEntry extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -57,7 +57,9 @@ export default class CartEntry extends Component {
                     </div>
                     <div className="cart-entry__details">
                         <h3>{this.props.name}</h3>
-                        <p>### Attribute des Produkts ###</p>
+                        <p>{this.props.bread !== "" ? `Brot: ${this.props.bread}` : ''}</p>
+                        <p>{this.props.toppings.length !== 0 ? `Toppings: ${this.props.toppings.join(', ')}` : ''}</p>
+                        <p>{this.props.sauces.length !== 0 ? `Sauces: ${this.props.sauces.join(', ')}` : ''}</p>
                     </div>
                 </div>
                 <div className="cart-entry__controls">
@@ -76,7 +78,7 @@ export default class CartEntry extends Component {
                     </div>
                     <div className="entry-remove">
                         <button 
-                            className="remove" 
+                            className="remove"
                             id={this.props.id}
                             onClick={ onDeleteHandler.bind(this) }
                             >Remove</button>
@@ -86,4 +88,19 @@ export default class CartEntry extends Component {
         )
 
     }
-}   
+}
+
+CartEntry.propTypes = {
+    quantity: PropTypes.number,
+    changeQuantityCart: PropTypes.func,
+    deleteFromCart: PropTypes.func,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    bread: PropTypes.string,
+    toppings: PropTypes.array,
+    sauces: PropTypes.array,
+    id: PropTypes.number,
+    totalPrice: PropTypes.number
+};
+
+export default CartEntry;

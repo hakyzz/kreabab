@@ -27,10 +27,10 @@ export function getProducts() {
 */
 
 export const fetchProducts = () => async dispatch => {
-  dispatch({type: FETCH_PRODUCTS_START})
+  dispatch({type: FETCH_PRODUCTS_START});
 
   try {
-    const products = await fetchProductsApi()
+    const products = await fetchProductsApi();
     dispatch({
       type: FETCH_PRODUCTS_SUCCESS,
       payload: products
@@ -42,14 +42,14 @@ export const fetchProducts = () => async dispatch => {
       error: true
     })
   }
-}
+};
 
 
 export const fetchProductById = (id) => async dispatch => {
-  dispatch({type: FETCH_PRODUCT_BY_ID_START})
+  dispatch({type: FETCH_PRODUCT_BY_ID_START});
 
   try {
-    const product = await fetchProductByIdApi(id)
+    const product = await fetchProductByIdApi(id);
     // console.log('fetchProductByIdApi', id)
     // console.log('fetchProductByIdApi product', product)
     dispatch({
@@ -63,15 +63,15 @@ export const fetchProductById = (id) => async dispatch => {
       error: true
     })
   }
-}
+};
 
 
 
 export const fetchCategories = () => async dispatch => {
-  dispatch({type: FETCH_CATEGORIES_START})
+  dispatch({type: FETCH_CATEGORIES_START});
 
   try {
-    const categories = await fetchCategoriesApi()
+    const categories = await fetchCategoriesApi();
     dispatch({
       type: FETCH_CATEGORIES_SUCCESS,
       payload: categories
@@ -83,4 +83,4 @@ export const fetchCategories = () => async dispatch => {
       error: true
     })
   }
-}
+};

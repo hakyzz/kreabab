@@ -18,18 +18,18 @@ export function changeQuantityCart(id, quantity) {
         id,
         quantity
     }
-};
+}
 
 export function deleteFromCart(id) {
     return {
         type: DELETE_FROM_CART,
         id
     }
-};
+}
 
 export function completeOrder() {
     return {
         type: COMPLETE_ORDER
     }
-};
+}
 

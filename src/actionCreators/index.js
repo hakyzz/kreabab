@@ -13,8 +13,7 @@ import {
 } from './cartActions';
 
 
-export { 
-    // getProducts,
+export {
     fetchProducts,
     fetchProductById,
     fetchCategories,

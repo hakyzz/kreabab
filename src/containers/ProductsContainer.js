@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom'
 
 import { fetchProducts, fetchCategories, addToCart } from '../actionCreators';
@@ -12,7 +11,6 @@ import ProductTeaserList from '../components/ProductTeaserList/ProductTeaserList
 class ProductsContainer extends Component {
     
     componentDidMount() {
-        // this.props.getProducts();
         this.props.fetchProducts();
         this.props.fetchCategories();
     }
@@ -31,18 +29,17 @@ class ProductsContainer extends Component {
     }
 }
 
-
 const mapStateToProps = (state, ownProps) => {
     return {        
         products: getProducts(state, ownProps)
     }
-}
+};
 
 const mapDispatchToProps = {
     fetchProducts,
     fetchCategories,
     addToCart
-}
+};
 
 export default withRouter(connect(
     mapStateToProps,

@@ -1,5 +1,4 @@
 import * as R from 'ramda'
-
 import {
     FETCH_PRODUCT_BY_ID_SUCCESS
 } from '../constants/ActionTypes';

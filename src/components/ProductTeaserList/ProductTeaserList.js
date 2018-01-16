@@ -52,6 +52,6 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
             }
         </div>
     </section>
-)
+);
 
 export default ProductTeaserList;

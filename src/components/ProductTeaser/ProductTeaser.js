@@ -19,6 +19,6 @@ const ProductTeaser = ({ children, product, name, image, description, price, han
             </div>
         </div>
     </div>
-)
+);
 
 export default ProductTeaser;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Button.css';
 import {
     Link
@@ -22,5 +23,10 @@ class Button extends Component {
         );
     }
 }
+
+Button.propTypes = {
+    linkName: PropTypes.string,
+    styleName: PropTypes.string
+};
 
 export default Button;

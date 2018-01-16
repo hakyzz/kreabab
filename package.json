@@ -26,6 +26,7 @@
     "superagent": "^3.8.2"
   },
   "scripts": {
+    "server": "json-server --watch src/api/db.json --port 3004",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
