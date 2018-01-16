@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './CustomizerNavigation.css';
-import Link from "react-router-dom/es/Link";
+import { Link } from "react-router-dom";
 import { menu } from "../../defs/nav"
 
 class CustomizerNavigation extends Component {
