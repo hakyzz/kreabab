@@ -1,4 +1,4 @@
-# Kreabab Shop&ensp;:burrito:
+# Kreabab Shop/Konfigurator&nbsp; :burrito:
 
 ![alt text](https://i.imgur.com/cCC3Fuf.png "Kreabab")
 
@@ -10,14 +10,14 @@ Der User steigt über das Produkt Sortiment in den Shop ein und kann eine belieb
 Dieses Projekt ist im Rahmen der CAS FEE Weiterbildung an der HSR als sogenanntes Projekt 2 - Schulprojekt entstanden.
 <br>
 <br>
-## Demo&ensp;:desktop_computer:
+## Demo&nbsp; :desktop_computer:
 [### Demo Link einfügen ###](https://www.google.com)
 <br>
 <br>
 
 
 # Dokumentation
-### Konzept / Design&ensp;:art:
+### Konzept / Design&nbsp; :art:
 
 Konzept und Design ist Tablet First entstanden, da Applikation hauptsächlich auf einem solchen Device laufen wird. Das Konzept und der Umfang der Views wurde mittels Wireframes in Sketch aufgebaut.
 
@@ -25,13 +25,13 @@ Konzept und Design ist Tablet First entstanden, da Applikation hauptsächlich au
 | Prozess  | &nbsp; |
 | :--- | :--- |
 | ![](https://i.imgur.com/QfAQZ5h.jpg "01") | **1.** User Journey und Screens-Übersicht in Form von Mockup Screens |
-| ![](https://i.imgur.com/ImXHbdF.jpg "02") | **2.** Wireframes und Dummy Inhalte auf Tablet |
+| ![](https://i.imgur.com/ImXHbdF.jpg "02") | **2.** Wireframes und Design Prototyp mit Dummy Inhalten für Usability Tests |
 | ![](https://i.imgur.com/UKs5EPD.jpg "03") | **3.** Detaildesign sowie Spezifikation und Slicing der Komponenten |
-|  |  |
 
-### Usability Test&ensp;:scream:
+### Usability Test&nbsp; :scream:
 
-Mit Hilfe des Screendesigns und einem rudimentären Prototyping Tool "InVision" wurde mit 4 Testpersonen Usability Test durchgeführt. Die Aufgabe war es:<br><br>
+Mit Hilfe des Screendesigns und einem rudimentären Prototyping Tool "InVision" wurde mit 4 Testpersonen Usability Test durchgeführt. Die Aufgabe war es:<br>
+<br>
 a) Ein Produkt in den Warenkorb legen und zum Checkout zu gelangen.<br>
 b) Einen eigenen "Kebab" zu konfigurieren und in den Warenkorb zu legen.
 <br><br>
@@ -39,7 +39,8 @@ b) Einen eigenen "Kebab" zu konfigurieren und in den Warenkorb zu legen.
 <br>
 <br>
 Bei beiden gestellten Aufgaben musste die Testperson den "Bestätigung" Screen erreichen. Der Test wurde begleitet durchgeführt, und die Testpersonen wurden aufgefordert "laut zu denken" und Entscheidungen für Klicks zu kommentieren. Das Feedback wurde anschliessend mittels Notizen festgehalten und ausgewertet.
-<br><br><br>
+<br>
+<br>
 ![alt text](https://i.imgur.com/XWWl7eM.jpg "Kreabab")
 <br>
 #### Ergebnisse & Erkenntnisse
@@ -50,22 +51,30 @@ Bei beiden gestellten Aufgaben musste die Testperson den "Bestätigung" Screen e
 - Eine Person hat erst den Continue Button "Weiter zu…" nicht als solchen erkannt.
 
 
-### Technologie
+### Technologie&nbsp; :atom_symbol:
 
-Lorem ipsum dolor sit amet.
+- Sass
+- React (Create React App Boilerplate)
+- Redux
+- React Router Dom
+- Json Server (REST API)
 
-### Aufbau & Struktur
+### Aufbau, Struktur und Komponenten&nbsp; :gear:
 
-Lorem ipsum dolor sit amet.
+#### Views
+:file_folder: &nbsp;Homepage<br>
+:file_folder: &nbsp;Product Detail<br>
+:file_folder: &nbsp;Konfigurator<br>
+:file_folder: &nbsp;Shopping Cart<br>
+:file_folder: &nbsp;Order Summery<br>
 
-### Module/Features
+#### Module/Features
 
-Lorem ipsum dolor sit amet.
-
-### Fazit
-
-Lorem ipsum dolor sit amet.
-
+- [x] Produktübersicht<br>
+- [x] Produkt Detailseite<br>
+- [x] Filter (Kategorien)<br>
+- [x] Konfigurator (3 Steps)<br>
+- [x] Warenkorb<br>
 
 # Setup
 #### Installation
@@ -75,8 +84,8 @@ git clone https://github.com/hakyzz/kreabab.git
 cd kreabab
 npm install
 ```
+#### Install JSON Mock Server globally
 
-Install JSON Mock Server globally:
 ```
 npm install -g json-server
 ```
@@ -107,3 +116,21 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+
+# Fazit 🤔
+
+#### Besonders gut gelöst
+- UI und Usability
+- Gute Herausforderung, dennoch nicht übernommen
+
+#### Würden "wir" anders machen
+- Mehr Zeit in den Konfigurator investieren
+- Bessere visuelles Bildmaterial für die Toppings "Schichten" aufbereiten
+
+#### Was haben "wir" gelernt
+- React & Redux
+
+<hr>
+
+©2018 / [hakyzz](https://github.com/hakyzz) & [miloezger](https://github.com/miloezger/) :metal:
