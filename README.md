@@ -125,6 +125,7 @@ Your app is ready to be deployed!
 - Gute Herausforderung, dennoch nicht übernommen
 
 #### Würden "wir" anders machen
+- Typisierung
 - Mehr Zeit in den Konfigurator investieren
 - Bessere visuelles Bildmaterial für die Toppings "Schichten" aufbereiten
 
