@@ -7,8 +7,7 @@
 
     /* Mobile */
     @media only screen and (max-width: 768px) {
-        flex-direction: row;
-
+        flex-direction: column;
         margin-left: -15px;
         margin-right: -15px;
         padding-left: 15px;
@@ -57,7 +56,13 @@
     /* Mobile */
     @media only screen and (max-width: 768px) {
         // flex-direction: column;
-        align-self: flex-end;
+        
+        align-self: auto;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
     }
 
     .entry-quantity {
