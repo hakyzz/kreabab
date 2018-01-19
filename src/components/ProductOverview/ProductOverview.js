@@ -11,7 +11,7 @@ class ProductOverview extends Component {
                 <div className="product-overview__cancel">
                     <BackNavigation/>
                 </div>
-                <CustomProduct />
+                <CustomProduct product={this.props.product}/>
             </div>
         );
     }

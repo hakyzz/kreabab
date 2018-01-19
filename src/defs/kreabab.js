@@ -1,16 +1,36 @@
-import FladenBrot from '../assets/img/fladenbrot.png';
-import BarbecueSauce from '../assets/img/barbecue-thumbnail@2x.png';
-import CockTailSauce from '../assets/img/cocktailsauce-thumbnail@2x.png';
-import JoghurtSauce from '../assets/img/joghurtsauce-thumbnail@2x.png';
-import ScharfeSauce from '../assets/img/scharfesauce-thumbnail@2x.png';
-import Taschenbrot from '../assets/img/taschenbrot-thumbnail@2x.png';
-import Salat from '../assets/img/salat-thumbnail@2x.png';
-import Zwiebeln from '../assets/img/zwiebeln-thumbnail@2x.png';
-import Gurken from '../assets/img/gurken-thumbnail@2x.png';
-import Tomaten from '../assets/img/tomaten-thumbnail@2x.png';
+import FladenBrot from '../assets/img/toppings/fladenbrot.png';
+import FladenBrotThumbNail from '../assets/img/thumbnails/fladenbrot.png';
+
+import BarbecueSauce from '../assets/img/toppings/joghurtsauce.png';
+import BarbecueSauceThumbNail from '../assets/img/thumbnails/barbecue.png';
+
+import CockTailSauce from '../assets/img/toppings/joghurtsauce.png';
+import CockTailSauceThumbNail from '../assets/img/thumbnails/cocktail.png';
+
+import JoghurtSauce from '../assets/img/toppings/joghurtsauce.png';
+import JoghurtSauceThumbNail from '../assets/img/thumbnails/joghurtsauce.png';
+
+import ScharfeSauce from '../assets/img/toppings/joghurtsauce.png';
+import ScharfeSauceThumbNail from '../assets/img/thumbnails/scharfesauce.png';
+
+import Taschenbrot from '../assets/img/toppings/taschenbrot.png';
+import TaschenbrotThumbNail from '../assets/img/thumbnails/taschenbrot.png';
+
+import Salat from '../assets/img/toppings/salat.png';
+import SalatThumbNail from '../assets/img/thumbnails/salat.png';
+
+import Zwiebeln from '../assets/img/toppings/zwiebeln.png';
+import ZwiebelnThumbNail from '../assets/img/thumbnails/zwiebeln.png';
+
+import Gurken from '../assets/img/toppings/gurken.png';
+import GurkenThumbNail from '../assets/img/thumbnails/gurken.png';
+
+import Tomaten from '../assets/img/toppings/tomaten.png';
+import TomatenThumbNail from '../assets/img/thumbnails/tomaten.png';
 
 
-export const CATEGORY_IDS = {'BREAD': 'bread', 'TOPPINGS': 'toppings', 'SAUCES': 'sauces'}
+
+export const CATEGORY_IDS = {'BREAD': 'bread', 'TOPPINGS': 'toppings', 'SAUCES': 'sauces'};
 
 export const categories = [
     {
@@ -19,7 +39,8 @@ export const categories = [
         title: "Brot wählen",
         items: [
             {
-                image: FladenBrot,
+                image: FladenBrotThumbNail,
+                topping: FladenBrot,
                 name: "breadType",
                 title: "Fladenbrot",
                 text: "Lorem ipsum",
@@ -27,7 +48,8 @@ export const categories = [
 
             },
             {
-                image: Taschenbrot,
+                image: TaschenbrotThumbNail,
+                topping: Taschenbrot,
                 name: "breadType",
                 title: "Taschenbrot",
                 text: "Lorem ipsum",
@@ -43,25 +65,29 @@ export const categories = [
         title: "Zutaten wählen",
         items: [
             {
-                image: Zwiebeln,
+                image: ZwiebelnThumbNail,
+                topping: Zwiebeln,
                 name: "toppingType",
                 title: "Zwiebeln",
                 text: "Lorem ipsum"
             },
             {
-                image: Salat,
+                image: SalatThumbNail,
+                topping: Salat,
                 name: "toppingType",
                 title: "Salat",
                 text: "Lorem ipsum"
             },
             {
-                image: Gurken,
+                image: GurkenThumbNail,
+                topping: Gurken,
                 name: "toppingType",
                 title: "Gurken",
                 text: "Lorem ipsum"
             },
             {
-                image: Tomaten,
+                image: TomatenThumbNail,
+                topping: Tomaten,
                 name: "toppingType",
                 title: "Tomaten",
                 text: "Lorem ipsum"
@@ -75,25 +101,29 @@ export const categories = [
         title: "Sauce wählen",
         items: [
             {
-                image: CockTailSauce,
+                image: CockTailSauceThumbNail,
+                topping: CockTailSauce,
                 name: "sauceType",
                 title: "Cocktailsauce",
                 text: "Lorem ipsum"
             },
             {
-                image: JoghurtSauce,
+                image: JoghurtSauceThumbNail,
+                topping: JoghurtSauce,
                 name: "sauceType",
                 title: "Joghurtsauce",
                 text: "Lorem ipsum"
             },
             {
-                image: BarbecueSauce,
+                image: BarbecueSauceThumbNail,
+                topping: BarbecueSauce,
                 name: "sauceType",
                 title: "Barbecue",
                 text: "Lorem ipsum"
             },
             {
-                image: ScharfeSauce,
+                image: ScharfeSauceThumbNail,
+                topping: ScharfeSauce,
                 name: "sauceType",
                 title: "Scharfe Sauce",
                 text: "Lorem ipsum"
