@@ -10,7 +10,7 @@ class OrderViewSummery extends Component {
             <div className="order-view">
                 <div className="order-view__header">
                     <h1>Bestätigung</h1>
-                    <p>Vielen Dank. Ihre Bestellung ist bei uns erfolgreich eingetroffen.</p>
+                    <p className="order-view__text">Vielen Dank. Ihre Bestellung ist bei uns erfolgreich eingetroffen.</p>
                 </div>
                 <div className="order-view__information">
                     <OrderInformation/>

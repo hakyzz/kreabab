@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import './CartEntry.css';
@@ -16,7 +16,7 @@ class CartEntry extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    componentWillReceiveProps (nextProps) {
+    componentWillReceiveProps(nextProps) {
         this.setState({
             quantity: nextProps.quantity
         });
@@ -25,7 +25,7 @@ class CartEntry extends Component {
     handleInputChange(event) {
         const quantity = event.value;
         const itemId = event.id;
-        const name = event.name; //quantity
+        const name = event.name;
 
         this.setState({
             [name]: quantity
@@ -36,13 +36,13 @@ class CartEntry extends Component {
 
     render() {
         function onDeleteHandler(event) {
-            const itemId = event.target.getAttribute("id");
+            const itemId = event.target.getAttribute('id');
             this.props.deleteFromCart(itemId);
         }
 
         function createNumbersArray(number, id, name) {
             const numbersArray = [];
-            for(let i = 1; i < number; i++) {
+            for (let i = 1; i < number; i++) {
                 numbersArray.push({value: i, label: i, id, name});
             }
 
@@ -52,41 +52,41 @@ class CartEntry extends Component {
         return (
             <div className="cart-entry" data-id={this.props.id}>
                 <div className="cart-entry__content">
-                    <div className="cart-entry__image">
-                        <img src={this.props.image} alt=""/>
+                    <div>
+                        <img className="cart-entry__image" src={this.props.image} alt=""/>
                     </div>
                     <div className="cart-entry__details">
-                        <h3>{this.props.name}</h3>
-                        <p>{this.props.bread !== "" ? `Brot: ${this.props.bread}` : ''}</p>
-                        <p>{this.props.toppings.length !== 0 ? `Toppings: ${this.props.toppings.join(', ')}` : ''}</p>
-                        <p>{this.props.sauces.length !== 0 ? `Sauces: ${this.props.sauces.join(', ')}` : ''}</p>
+                        <h3 className="cart-entry__details-title">{this.props.name}</h3>
+                        <p className="cart-entry__details-text">{this.props.bread !== "" ? `Brot: ${this.props.bread}` : ''}</p>
+                        <p className="cart-entry__details-text">{this.props.toppings.length !== 0 ? `Toppings: ${this.props.toppings.join(', ')}` : ''}</p>
+                        <p className="cart-entry__details-text">{this.props.sauces.length !== 0 ? `Sauces: ${this.props.sauces.join(', ')}` : ''}</p>
                     </div>
                 </div>
                 <div className="cart-entry__controls">
-                    <div className="entry-quantity">
+                    <div className="cart-entry__quantity">
                         <label htmlFor="entry-quantity">Anzahl:</label>
                         <Select
                             clearable={false}
                             searchable={false}
                             value={this.state.quantity}
                             onChange={this.handleInputChange}
-                            options={createNumbersArray(999, this.props.id, "entry-quantity")}
+                            options={createNumbersArray(999, this.props.id, 'entry-quantity')}
                         />
                     </div>
-                    <div className="entry-price">
+                    <div className="cart-entry__price">
                         <span><FormatPrice price={this.props.totalPrice}/></span>
                     </div>
-                    <div className="entry-remove">
-                        <button 
-                            className="remove"
+                    <div className="cart-entry__remove">
+                        <button
+                            className="cart-entry__remove-button"
                             id={this.props.id}
-                            onClick={ onDeleteHandler.bind(this) }
-                            >Remove</button>
+                            onClick={onDeleteHandler.bind(this)}
+                        >Remove
+                        </button>
                     </div>
                 </div>
             </div>
         )
-
     }
 }
 

@@ -1,10 +1,10 @@
 .order-view {
-    .order-view__header {
-        margin-bottom: 40px;
 
-        h1 + p {
-            margin-top: 30px;
-        }
+    &__header {
+        margin-bottom: 40px;
     }
-    
+
+    &__text {
+        margin-top: 30px;
+    }
 }

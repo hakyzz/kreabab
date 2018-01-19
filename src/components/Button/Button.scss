@@ -1,4 +1,4 @@
-.btn {
+.button {
   cursor: pointer;
   border: 2px solid var(--primary-color);
   border-radius: 100px;
@@ -13,7 +13,7 @@
   white-space: nowrap;
   transition: all 0.3s ease 0s;
 
-  &.primary {
+  &--primary {
     color: var(--white);
     background-color: var(--primary-color);
 
@@ -30,7 +30,7 @@
     }
   }
 
-  &.secondary {
+  &--secondary {
     color: var(--primary-color);
     background-color: var(--white);
 
@@ -41,6 +41,4 @@
       transform: translate(0, -5px);
     }
   }
-
-
 }

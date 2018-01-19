@@ -10,8 +10,8 @@ class Logo extends Component {
     render() {
         return (
             <div className="logo">
-                <Link to="/">
-                    <img src={AppLogo} className="App-logo" alt="logo"/>
+                <Link className="logo__link" to="/">
+                    <img className="logo__image" src={AppLogo} alt="logo"/>
                 </Link>
             </div>
         );

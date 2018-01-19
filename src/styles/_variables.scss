@@ -1,7 +1,5 @@
-
 // Webfont
 @import url('https://rsms.me/inter/inter-ui.css');
-
 
 :root {
     --base-font : 'Inter UI', sans-serif;
@@ -29,8 +27,6 @@
     --font-size-l: 1.125rem; // 18px
     --font-size-m: 1rem; // 16px = 1rem (base)
     --font-size-s: 0.875rem; // 14px
-
-
 }
 
 /* Mobile */
@@ -39,4 +35,4 @@
         --font-size-xxl: 1.75rem; // 28px
         --font-size-l: 1rem; // 16px
     }
-}
+};

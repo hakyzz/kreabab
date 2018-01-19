@@ -1,10 +1,12 @@
-.site-footer {
-    // border-top: 1px solid red;
-    // padding-top: 1em;
+.footer {
     margin-top: 6em;
     background-color: transparent;
     
-    p {
+    &__text {
         font-size: var(--font-size-s);
+    }
+
+    &__link {
+        color: var(--primary-color);
     }
 }

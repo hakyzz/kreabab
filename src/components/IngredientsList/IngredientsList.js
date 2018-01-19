@@ -11,7 +11,7 @@ class IngredientsList extends Component {
             })
         );
 
-        if(this.props.type === "symbolList") {
+        if (this.props.type === "symbolList") {
             return (
                 <div className="ingredients-list">
                     <h2>{this.props.title}</h2>
@@ -32,8 +32,8 @@ class IngredientsList extends Component {
 }
 
 IngredientsList.propTypes = {
-    children: PropTypes.array,
-    type: PropTypes.string,
+    children: PropTypes.array.isRequired,
+    type: PropTypes.string.isRequired,
     title: PropTypes.string
 };
 

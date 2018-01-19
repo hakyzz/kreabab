@@ -8,8 +8,8 @@ class Footer extends Component {
 
     render() {
         return (
-            <footer className="site-footer">
-                <p>&copy;{(new Date().getFullYear())} - Kreabab Döner Shop | <Link to="/">www.kreabab.shop</Link></p>
+            <footer className="footer">
+                <p className="footer__text">&copy;{(new Date().getFullYear())} - Kreabab Döner Shop | <Link className="footer__link" to="/">www.kreabab.shop</Link></p>
             </footer>
         );
     }

@@ -10,7 +10,6 @@ import {
     completeOrder
 } from './cartActions';
 
-
 export {
     fetchProducts,
     fetchCategories,

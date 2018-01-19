@@ -14,9 +14,9 @@ class Button extends Component {
         return (
             <div>
                 {linkName ? (
-                    <Link to={this.props.linkName} className={`btn cta-large ${ this.props.styleName }`}>{this.props.children}</Link>
+                    <Link to={this.props.linkName} className={`button ${ this.props.styleName ? 'button--' + this.props.styleName : ''}`}>{this.props.children}</Link>
                 ) : (
-                    <button onClick={this.props.onClick} className={`btn cta-large ${ this.props.styleName }`}>{this.props.children}</button>
+                    <button onClick={this.props.onClick} className={`button ${ this.props.styleName ? 'button--' + this.props.styleName : ''}`}>{this.props.children}</button>
                 )}
             </div>
 

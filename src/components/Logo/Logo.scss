@@ -1,25 +1,22 @@
 .logo {
-    padding-top: 30px;
+    padding-top: 15px;
     margin-left: -5px;
 
-    a {
+    &__link {
         display: block;
     }
 }
 
-/* Tablet */
-@media only screen and (max-width: 1024px) {
+@media (min-width: 768px) {
     .logo {
         padding-top: 20px;
         margin-left: -5px;
     }
 }
 
-/* Mobile */
-@media only screen and (max-width: 768px) {
+@media (min-width: 1025px) {
     .logo {
-        padding-top: 15px;
+        padding-top: 30px;
         margin-left: -5px;
     }
-
 }

@@ -1,3 +1,54 @@
 .product-toppings {
+  position: relative;
 
+  &--sauce {
+    z-index: 99;
+  }
+
+  &__overlay {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+
+    &--enter {
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translateY(-200px);
+      opacity: 0;
+      &-active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    &--leave {
+      transition: transform 0.2s, opacity 0.2s;
+      transform: translateY(0);
+      opacity: 1;
+      &-active {
+        transform: translateY(-200px);
+        opacity: 0;
+      }
+    }
+
+    &--meat {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .product-toppings {
+    &__overlay {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      padding-top: 20px;
+      height: 350px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }

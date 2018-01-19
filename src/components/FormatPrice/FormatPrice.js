@@ -18,7 +18,7 @@ class FormatPrice extends Component {
 }
 
 FormatPrice.propTypes = {
-    price: PropTypes.any,
+    price: PropTypes.any.isRequired,
 };
 
 export default FormatPrice;

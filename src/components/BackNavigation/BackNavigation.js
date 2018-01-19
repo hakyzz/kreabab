@@ -4,7 +4,6 @@ import {
     Link 
 } from 'react-router-dom';
 
-
 class BackNavigation extends Component {
 
     render() {

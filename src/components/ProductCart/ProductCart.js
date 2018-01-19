@@ -36,10 +36,10 @@ class ProductCart extends Component {
 }
 
 ProductCart.propTypes = {
-    activeCategoryId: PropTypes.string,
-    history: PropTypes.object,
-    addToCart: PropTypes.func,
-    price: PropTypes.number,
+    activeCategoryId: PropTypes.string.isRequired,
+    history: PropTypes.object.isRequired,
+    addToCart: PropTypes.func.isRequired,
+    price: PropTypes.number.isRequired,
 };
 
 export default ProductCart;

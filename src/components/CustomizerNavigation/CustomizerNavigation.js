@@ -25,7 +25,7 @@ class CustomizerNavigation extends Component {
 }
 
 CustomizerNavigation.propTypes = {
-    filter: PropTypes.string,
+    filter: PropTypes.string.isRequired,
 };
 
 export default CustomizerNavigation;
