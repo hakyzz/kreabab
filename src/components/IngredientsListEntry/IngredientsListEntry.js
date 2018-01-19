@@ -23,7 +23,7 @@ class IngredientsListEntry extends Component {
 
         if(this.props.type === "symbolList") {
             return (
-                <div className="ingredients-list-entry ingredients-list-entry--symbols">
+                <div className={`ingredients-list-entry ingredients-list-entry--symbols ${ this.props.selected ? 'added' : '' }`}>
                     <label htmlFor={this.props.title} className="ingredients-list-entry__label ingredients-list-entry__label--symbol">
                         <img src={this.props.image} className="ingredients-list-entry__image" alt={this.props.children}/>
                     </label>
@@ -33,7 +33,7 @@ class IngredientsListEntry extends Component {
             );
         } else {
             return (
-                <div  className="ingredients-list-entry">
+                <div className={`ingredients-list-entry ${ this.props.selected ? 'added' : '' }`}>
                     <label htmlFor={this.props.title} className="ingredients-list-entry__label">
                         <img src={this.props.image} className="ingredients-list-entry__image" alt=""/>
                         <span>

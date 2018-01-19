@@ -3,13 +3,26 @@
   color: var(--white);
   width: 100%;
   min-height: min-content;
-  padding: 24px 30px;
   margin-top: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
+  &__quantity,
   &__forward-link {
+    padding: 24px 0px;
+  }
+
+  &__quantity {
+    padding-left: 30px;
+  }
+  &__forward-link {
+    padding-left: 30px;
+    padding-right: 30px;
     cursor: pointer;
+
+    &:hover {
+      background-color: #333;
+    }
   }
 }

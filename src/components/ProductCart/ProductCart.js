@@ -29,7 +29,7 @@ class ProductCart extends Component {
         return (
             <div className="product-cart">
                 <div className="product-cart__quantity"><FormatPrice price={this.props.price} /></div>
-                <div onClick={this.handleClick} className="product-cart__forward-link">{menuItemLabel}</div>
+                <div onClick={this.handleClick} className="product-cart__forward-link">{menuItemLabel}&nbsp;&nbsp;></div>
             </div>
         );
     }
