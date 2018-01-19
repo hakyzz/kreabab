@@ -4,7 +4,7 @@ import { getCartItems } from "../helper/localStorage";
 const initialEmptyState = [];
 
 // Check local storage for initial state
-function getInitialState() {
+export function getInitialState() {
     const cardStateFromLocalStorage = getCartItems();
     if(cardStateFromLocalStorage) {
         return cardStateFromLocalStorage

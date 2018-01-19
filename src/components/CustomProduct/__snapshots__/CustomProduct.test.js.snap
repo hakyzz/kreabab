@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshop 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CustomProduct
+    product={
+        Object {
+            "bread": "Fladenbrot",
+            "sauces": Array [],
+            "toppings": Array [],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <CSSTransitionGroup
+          transitionAppear={false}
+          transitionEnter={true}
+          transitionEnterTimeout={300}
+          transitionLeave={true}
+          transitionLeaveTimeout={200}
+          transitionName={
+                    Object {
+                              "enter": "kreabab__topping--enter",
+                              "leave": "kreabab__topping--leave",
+                            }
+          }
+>
+          
+</CSSTransitionGroup>,
+        <div
+          className="product-topping"
+>
+          <div
+                    className="kreabab__topping kreabab__topping--fleisch"
+                    style={
+                              Object {
+                                        "backgroundImage": "url(fleisch.png)",
+                                      }
+                    }
+          />
+</div>,
+        <img
+          alt="Fladenbrot"
+          className="custom-product__image"
+          src="fladenbrot.png"
+/>,
+        <h2>
+          Fladenbrot
+</h2>,
+      ],
+      "className": "custom-product",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [],
+          "transitionAppear": false,
+          "transitionEnter": true,
+          "transitionEnterTimeout": 300,
+          "transitionLeave": true,
+          "transitionLeaveTimeout": 200,
+          "transitionName": Object {
+            "enter": "kreabab__topping--enter",
+            "leave": "kreabab__topping--leave",
+          },
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "fleisch",
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="kreabab__topping kreabab__topping--fleisch"
+            style={
+                        Object {
+                                    "backgroundImage": "url(fleisch.png)",
+                                  }
+            }
+/>,
+          "className": "product-topping",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "kreabab__topping kreabab__topping--fleisch",
+            "style": Object {
+              "backgroundImage": "url(fleisch.png)",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Fladenbrot",
+          "className": "custom-product__image",
+          "src": "fladenbrot.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Fladenbrot",
+        },
+        "ref": null,
+        "rendered": "Fladenbrot",
+        "type": "h2",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <CSSTransitionGroup
+            transitionAppear={false}
+            transitionEnter={true}
+            transitionEnterTimeout={300}
+            transitionLeave={true}
+            transitionLeaveTimeout={200}
+            transitionName={
+                        Object {
+                                    "enter": "kreabab__topping--enter",
+                                    "leave": "kreabab__topping--leave",
+                                  }
+            }
+>
+            
+</CSSTransitionGroup>,
+          <div
+            className="product-topping"
+>
+            <div
+                        className="kreabab__topping kreabab__topping--fleisch"
+                        style={
+                                    Object {
+                                                "backgroundImage": "url(fleisch.png)",
+                                              }
+                        }
+            />
+</div>,
+          <img
+            alt="Fladenbrot"
+            className="custom-product__image"
+            src="fladenbrot.png"
+/>,
+          <h2>
+            Fladenbrot
+</h2>,
+        ],
+        "className": "custom-product",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+            "transitionAppear": false,
+            "transitionEnter": true,
+            "transitionEnterTimeout": 300,
+            "transitionLeave": true,
+            "transitionLeaveTimeout": 200,
+            "transitionName": Object {
+              "enter": "kreabab__topping--enter",
+              "leave": "kreabab__topping--leave",
+            },
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "fleisch",
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="kreabab__topping kreabab__topping--fleisch"
+              style={
+                            Object {
+                                          "backgroundImage": "url(fleisch.png)",
+                                        }
+              }
+/>,
+            "className": "product-topping",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "kreabab__topping kreabab__topping--fleisch",
+              "style": Object {
+                "backgroundImage": "url(fleisch.png)",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Fladenbrot",
+            "className": "custom-product__image",
+            "src": "fladenbrot.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fladenbrot",
+          },
+          "ref": null,
+          "rendered": "Fladenbrot",
+          "type": "h2",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
