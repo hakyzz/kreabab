@@ -7,6 +7,11 @@
 
   &__overlay {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding-top: 20px;
+    height: 200px;
     background-repeat: no-repeat;
     background-size: contain;
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -44,9 +49,9 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 350px;
+      width: 500px;
       padding-top: 20px;
-      height: 350px;
+      height: 500px;
       background-size: contain;
       background-repeat: no-repeat;
     }

@@ -10,10 +10,10 @@
 
 @media (min-width: 768px) {
   .custom-product {
-    padding-top: 156px;
+    padding-top: calc(50% - 250px);
 
     &__image {
-      width: 350px;
+      width: 500px;
     }
   }
 }

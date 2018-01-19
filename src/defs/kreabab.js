@@ -1,16 +1,13 @@
 import FladenBrot from '../assets/img/toppings/fladenbrot.png';
 import FladenBrotThumbNail from '../assets/img/thumbnails/fladenbrot.png';
 
-import BarbecueSauce from '../assets/img/toppings/joghurtsauce.png';
-import BarbecueSauceThumbNail from '../assets/img/thumbnails/barbecue.png';
-
-import CockTailSauce from '../assets/img/toppings/joghurtsauce.png';
+import CockTailSauce from '../assets/img/toppings/cocktailsauce.png';
 import CockTailSauceThumbNail from '../assets/img/thumbnails/cocktail.png';
 
 import JoghurtSauce from '../assets/img/toppings/joghurtsauce.png';
 import JoghurtSauceThumbNail from '../assets/img/thumbnails/joghurtsauce.png';
 
-import ScharfeSauce from '../assets/img/toppings/joghurtsauce.png';
+import ScharfeSauce from '../assets/img/toppings/scharfesauce.png';
 import ScharfeSauceThumbNail from '../assets/img/thumbnails/scharfesauce.png';
 
 import Taschenbrot from '../assets/img/toppings/taschenbrot.png';
@@ -112,13 +109,6 @@ export const categories = [
                 topping: JoghurtSauce,
                 name: "sauceType",
                 title: "Joghurtsauce",
-                text: "Lorem ipsum"
-            },
-            {
-                image: BarbecueSauceThumbNail,
-                topping: BarbecueSauce,
-                name: "sauceType",
-                title: "Barbecue",
                 text: "Lorem ipsum"
             },
             {
