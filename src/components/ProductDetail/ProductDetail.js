@@ -4,7 +4,7 @@ import './ProductDetail.css';
 import Button from '../Button/Button';
 import FormatPrice from '../FormatPrice/FormatPrice';
 
-const ProductDetail = ({ product, handleAddToCartClick, price }) => (
+const ProductDetail = ({product, handleAddToCartClick, price}) => (
 
     <div className="product-detail">
         <div className="product-detail__content">
@@ -12,10 +12,10 @@ const ProductDetail = ({ product, handleAddToCartClick, price }) => (
             <p className="product-detail__price"><FormatPrice price={product.price}/></p>
             <p className="product-detail__description">{product.description}</p>
             <div>
-            <p>{product.bread !== "" ? `Brot: ${product.bread}` : ''}</p>
-            <p>{product.toppings.length !== 0 ? `Toppings: ${product.toppings.join(', ')}` : ''}</p>
-            <p>{product.sauce.length !== 0 ? `Sauces: ${product.sauce.join(', ')}` : ''}</p>
-            <br />
+                <p>{product.bread !== "" ? `Brot: ${product.bread}` : ''}</p>
+                <p>{product.toppings.length !== 0 ? `Toppings: ${product.toppings.join(', ')}` : ''}</p>
+                <p>{product.sauce.length !== 0 ? `Sauces: ${product.sauce.join(', ')}` : ''}</p>
+                <br/>
             </div>
             <div className="product-detail__button">
                 <Button styleName="secondary" onClick={() => {
@@ -23,9 +23,9 @@ const ProductDetail = ({ product, handleAddToCartClick, price }) => (
                 }}>Add to Cart</Button>
             </div>
         </div>
-        <div className="product-detail__image">
+        <div>
             <img
-                className="product-image"
+                className="product-detail__image"
                 src={product.image}
                 alt={product.name}
             />

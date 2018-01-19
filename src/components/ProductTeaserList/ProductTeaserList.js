@@ -40,7 +40,7 @@ const ProductTeaserList = ({ products, handleAddToCartClick }) => (
                                     handleAddToCartClick(product);
                                 }}>Add to Cart</Button>
                                 <div>
-                                    <Link to={`/products/${product.id}`} className="cta-details">
+                                    <Link to={`/products/${product.id}`} className="product-teaser__detail-link">
                                         Details
                                     </Link>
                                 </div>

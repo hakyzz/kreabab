@@ -1,37 +1,39 @@
-.basket {
+.shopping-bag {
   position: fixed;
-  top: 30px;
-  right: 30px;
+  padding-top: 0;
+  top: 15px;
+  right: 6px;
   z-index: 9; }
-  .basket--cart-view {
+  .shopping-bag--cart-view {
     position: relative;
     right: 6px; }
-
-.shopping-bag {
-  height: 60px;
-  width: 60px;
-  border-radius: 100px;
-  color: var(--primary-color);
-  background-color: #FFFFFF;
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: all 0.3s ease 0s; }
-  .shopping-bag:visited {
-    color: var(--primary-color); }
-  .shopping-bag:hover {
-    background-color: #000;
-    color: #fff;
-    transform: translate(0, -5px); }
+  .shopping-bag__link {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    color: var(--primary-color);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease 0s; }
+    .shopping-bag__link:visited {
+      color: var(--primary-color); }
+    .shopping-bag__link:hover {
+      background-color: #000;
+      color: #fff;
+      transform: translate(0, -5px); }
+  .shopping-bag__icon {
+    width: 18px; }
   .shopping-bag__counter {
+    right: -2px;
+    top: -2px;
+    height: 18px;
+    width: 18px;
     position: absolute;
-    right: -7px;
-    top: -7px;
-    height: 24px;
-    width: 24px;
     border: 2px solid #D0021B;
     color: #D0021B;
     border-radius: 100px;
@@ -41,30 +43,26 @@
     justify-content: center;
     align-items: center;
     font-size: var(--font-size-s);
-    text-align: center; }
+    text-align: center;
+    /* Animation on state change */ }
+    .shopping-bag__counter--animation {
+      animation: Score-keyframes--bounce .5s ease-out; }
 
-/* Tablet */
-/* Mobile */
-@media only screen and (max-width: 768px) {
-  .basket {
-    position: fixed;
-    padding-top: 0;
-    top: 15px;
-    right: 6px; }
+@media (min-width: 768px) {
   .shopping-bag {
-    height: 50px;
-    width: 50px; }
-    .shopping-bag svg {
-      width: 18px; }
+    position: fixed;
+    top: 30px;
+    right: 30px; }
+    .shopping-bag__link {
+      height: 60px;
+      width: 60px; }
+    .shopping-bag__icon {
+      width: inherit; }
     .shopping-bag__counter {
-      right: -2px;
-      top: -2px;
-      height: 18px;
-      width: 18px; } }
-
-/* Animation on state change */
-.shopping-bag__counter__animation {
-  animation: Score-keyframes--bounce .5s ease-out; }
+      right: -7px;
+      top: -7px;
+      height: 24px;
+      width: 24px; } }
 
 @keyframes Score-keyframes--bounce {
   0% {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ProductOverview.css';
 import BackNavigation from '../../components/BackNavigation/BackNavigation';
 import CustomProduct from '../../components/CustomProduct/CustomProduct';
@@ -16,5 +17,9 @@ class ProductOverview extends Component {
         );
     }
 }
+
+ProductOverview.propTypes = {
+    product: PropTypes.object.isRequired,
+};
 
 export default ProductOverview;

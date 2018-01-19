@@ -54,7 +54,7 @@ IngredientsListEntry.propTypes = {
     handleClick: PropTypes.func.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    type: PropTypes.string,
     image: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
