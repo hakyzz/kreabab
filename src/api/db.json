@@ -7,7 +7,7 @@
             "image": "/uploads/01.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
             "price": 12.90,
-            "bread": "Taschenbrot",
+            "bread": "Fladenbrot",
             "toppings": [],
             "sauce": []
         },
@@ -18,7 +18,7 @@
             "image": "/uploads/02.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
             "price": 9.90,
-            "bread": "Fladenbrot",
+            "bread": "Taschenbrot",
             "toppings": [],
             "sauce": []
         },
@@ -29,7 +29,7 @@
             "image": "/uploads/03.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
             "price": 15.90,
-            "bread": "Taschenbrot",
+            "bread": "",
             "toppings": [],
             "sauce": []
         },
@@ -40,7 +40,7 @@
             "image": "/uploads/04.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
             "price": 20.45,
-            "bread": "Taschenbrot",
+            "bread": "",
             "toppings": [],
             "sauce": []
         },
@@ -51,7 +51,7 @@
             "image": "/uploads/01.jpg",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
             "price": 9.90,
-            "bread": "Taschenbrot",
+            "bread": "Fladenbrot",
             "toppings": [],
             "sauce": []
         },
