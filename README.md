@@ -10,10 +10,6 @@ Der User steigt über das Produkt Sortiment in den Shop ein und kann eine belieb
 Dieses Projekt ist im Rahmen der CAS FEE Weiterbildung an der HSR als sogenanntes Projekt 2 - Schulprojekt entstanden.
 <br>
 <br>
-## Demo&nbsp; :desktop_computer:
-[### Demo Link einfügen ###](https://www.google.com)
-<br>
-<br>
 
 
 # Dokumentation
@@ -58,6 +54,7 @@ Bei beiden gestellten Aufgaben musste die Testperson den "Bestätigung" Screen e
 - Redux
 - React Router Dom
 - Json Server (REST API)
+- Jest
 
 ### Aufbau, Struktur und Komponenten&nbsp; :gear:
 
@@ -77,6 +74,9 @@ Bei beiden gestellten Aufgaben musste die Testperson den "Bestätigung" Screen e
 - [x] Warenkorb<br>
 
 # Setup
+
+node version 8.5.0 required
+
 #### Installation
 
 ```

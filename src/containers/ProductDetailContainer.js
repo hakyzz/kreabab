@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { addToCart } from '../actionCreators';
 import { getProductById } from '../selectors/product'
 import ProductDetail from '../components/ProductDetail/ProductDetail';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
 
 class ProductDetailContainer extends Component {
 

@@ -39,7 +39,7 @@ class CustomizerView extends Component {
                 });
             }
         }
-    }
+    };
 
     render() {
         const { filter } = this.props.match.params;

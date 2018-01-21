@@ -8,7 +8,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class ProductDetailView extends Component {
 
     render() {
-        // console.log(this.props.match.params.id);
         return (
             <ReactCSSTransitionGroup
                 transitionName="fade"

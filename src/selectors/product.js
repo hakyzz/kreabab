@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+import * as R from 'ramda';
 
 export const getProductById = (state, id) => R.prop(id, state.products);
 
