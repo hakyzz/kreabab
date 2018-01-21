@@ -7,6 +7,7 @@ import CartEntry from '../CartEntry/CartEntry';
 import Button from '../Button/Button';
 import ButtonList from '../ButtonList/ButtonList';
 import FormatPrice from '../FormatPrice/FormatPrice';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
     const hasProducts = cart.length > 0;
@@ -15,21 +16,24 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
 
         nodes = cart.map((cartItem, index) => {
 
-            return <CartEntry
-                key={index}
-                id={cartItem.id}
-                name={cartItem.name}
-                image={cartItem.image}
-                price={cartItem.price}
-                quantity={cartItem.quantity}
-                totalPrice={cartItem.totalPrice}
-                deleteFromCart={deleteFromCart}
-                changeQuantityCart={changeQuantityCart}
-                productOptions={cartItem.options}
-                bread={cartItem.bread || ''}
-                sauces={cartItem.sauces || []}
-                toppings={cartItem.toppings || []}
-            />
+            return (
+                <CartEntry
+                    key={index}
+                    id={cartItem.id}
+                    name={cartItem.name}
+                    image={cartItem.image}
+                    price={cartItem.price}
+                    quantity={cartItem.quantity}
+                    totalPrice={cartItem.totalPrice}
+                    deleteFromCart={deleteFromCart}
+                    changeQuantityCart={changeQuantityCart}
+                    productOptions={cartItem.options}
+                    bread={cartItem.bread || ''}
+                    sauces={cartItem.sauces || []}
+                    toppings={cartItem.toppings || []}
+                />
+            )
+
         })
 
     } else {
@@ -47,7 +51,14 @@ const CartList = ({ cart, cartTotal, deleteFromCart, changeQuantityCart }) => {
                 <h1>Warenkorb</h1>
             </div>
             <div className="cart-list__list">
-                {nodes}
+                <ReactCSSTransitionGroup
+                    transitionName="remove-item"
+                    transitionAppear={false}
+                    transitionAppearTimeout={500}
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+                    {nodes}
+                </ReactCSSTransitionGroup>
             </div>
             <div className="cart-list__summary">
                 <div className="">Total</div>

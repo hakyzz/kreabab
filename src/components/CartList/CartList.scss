@@ -5,6 +5,18 @@
 
     &__list {
         border-top: 1px solid var(--border-light);
+ 
+        .remove-item-leave {
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+
+        .remove-item-leave.remove-item-leave-active {
+            opacity: 0.01;
+            transform: translate(50px, 0px);
+            transition: all .5s ease;
+        }
+
     }
     
     &__summary {

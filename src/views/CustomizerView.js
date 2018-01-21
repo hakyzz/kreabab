@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductOverview from '../components/ProductOverview/ProductOverview';
 import ProductCustomizer from '../containers/ProductCustomizer';
 import { categories} from '../defs/kreabab'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class CustomizerView extends Component {
 
@@ -44,10 +45,17 @@ class CustomizerView extends Component {
         const { filter } = this.props.match.params;
 
         return (
-            <div className="customizer">
-                <ProductOverview product={this.state}/>
-                <ProductCustomizer selection={this.state} handleIngredientItemClick={this.handleIngredientItemClick} filter={filter} storeChanged={this.storeChanged} history={this.props.history} />
-            </div>
+            <ReactCSSTransitionGroup
+                transitionName="fade"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+                <div className="customizer">
+                    <ProductOverview product={this.state}/>
+                    <ProductCustomizer selection={this.state} handleIngredientItemClick={this.handleIngredientItemClick} filter={filter} storeChanged={this.storeChanged} history={this.props.history} />
+                </div>
+            </ReactCSSTransitionGroup>
         );
     }
 }
